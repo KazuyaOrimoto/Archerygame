@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.archerygame.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\umaha\\Desktop\\Unity\\Archery\\Archerygame\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "ArcheryGame [Testing]"
+        }
+      }
+    }
+  ]
+}
