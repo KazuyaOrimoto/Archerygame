@@ -1,0 +1,3 @@
+https://qiita.com/kyourikey/items/232f7810769c7727c9bd			コントローラー
+http://kan-kikuchi.hatenablog.com/entry/Unity_VIVE_Getting_Started	VR初期設定系
+https://techblog.kayac.com/unity_advent_calendar_2018_17		コントローラー　物体操作
