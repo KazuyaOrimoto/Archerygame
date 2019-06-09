@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3131792265806194973}
   - component: {fileID: 2130983556586088073}
   - component: {fileID: 6032714553478809117}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: gaikotu
   m_TagString: Untagged
   m_Icon: {fileID: 0}

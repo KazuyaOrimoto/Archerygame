@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2451782213612965151}
   - component: {fileID: 6431354759390080729}
   - component: {fileID: 9014329332780852320}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: noumen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,3 +105,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b480809d1b87f34e82cc61aa28c1a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDieEffect: {fileID: 0}

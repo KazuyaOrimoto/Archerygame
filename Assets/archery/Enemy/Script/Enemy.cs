@@ -31,4 +31,15 @@ public class Enemy : MonoBehaviour
             GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
         }
     }
+
+    [System.Obsolete]
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "projectile")
+        {
+            DestroyObject(other.gameObject);
+            DestroyObject(this.gameObject);
+            GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
+        }
+    }
 }
