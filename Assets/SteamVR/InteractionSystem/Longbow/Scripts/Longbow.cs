@@ -46,7 +46,7 @@ namespace Valve.VR.InteractionSystem
 		private const float bowPullPulseStrengthHigh = 500;
 		private Vector3 bowLeftVector;
 
-		public float arrowMinVelocity = 7f;
+		public float arrowMinVelocity = 35f;
 		public float arrowMaxVelocity = 70f;
 		private float arrowVelocity = 70f;
 
@@ -96,6 +96,7 @@ namespace Valve.VR.InteractionSystem
 			// Update handedness guess
 			EvaluateHandedness();
 
+            //トリガーを引いて弓を構えた時
 			if ( nocked )
 			{
 				Vector3 nockToarrowHand = ( arrowHand.arrowNockTransform.parent.position - nockRestTransform.position ); // Vector from bow nock transform to arrowhand nock transform - used to align bow when drawing
