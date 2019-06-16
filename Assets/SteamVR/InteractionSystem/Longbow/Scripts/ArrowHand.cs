@@ -41,6 +41,8 @@ namespace Valve.VR.InteractionSystem
         public int maxArrowCount = 10;
         private List<GameObject> arrowList;
 
+        [SerializeField]
+        private GameObject arrowDeleteCount;
 
         //-------------------------------------------------
         void Awake()
@@ -240,6 +242,9 @@ namespace Valve.VR.InteractionSystem
             //弓の生成
             int bouNum = bow.GetBowNum();
 
+            GameObject arrowDeleteObject = Instantiate(arrowDeleteCount,null);
+            arrowDeleteObject.GetComponent<ArrowDeleteCount>().SetArrowNum(bouNum * 2 + 1);
+
             for (int i = -bouNum; i <= bouNum; i++)
             {
                 GameObject arrowCopy = Instantiate(currentArrow, bow.transform, false);
@@ -252,6 +257,7 @@ namespace Valve.VR.InteractionSystem
 
                 Arrow arrowCopy1 = arrowCopy.GetComponent<Arrow>();
 
+                arrowCopy1.SetArrowDeleteArea(arrowDeleteObject);
                 arrowCopy1.arrowHeadRB.AddForce(arrowCopy.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange);
                 arrowCopy1.arrowHeadRB.AddTorque(arrowCopy.transform.forward * 10);
                 arrowCopy1.damege = 300 / (bouNum * 2 + 1) ;

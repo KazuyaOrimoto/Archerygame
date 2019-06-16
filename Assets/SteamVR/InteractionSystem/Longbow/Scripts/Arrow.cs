@@ -37,6 +37,8 @@ namespace Valve.VR.InteractionSystem
 
 		private GameObject scaleParentObject = null;
 
+        public GameObject DeleteAreaObject { get; set; }
+
         public int damege { get; set; }
 
 
@@ -267,6 +269,10 @@ namespace Valve.VR.InteractionSystem
 		//	transform.position = collision.contacts[0].point - transform.forward * ( 0.75f - ( Util.RemapNumberClamped( prevVelocity.magnitude, 0f, 10f, 0.0f, 0.1f ) + Random.Range( 0.0f, 0.05f ) ) );
 		//}
 
+        public void SetArrowDeleteArea(GameObject gameObject)
+        {
+            DeleteAreaObject = gameObject;
+        }
 
 		//-------------------------------------------------
 		void OnDestroy()

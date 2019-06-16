@@ -10,9 +10,25 @@ namespace Valve.VR.InteractionSystem
         private float countTime;
         private bool counting;
         private bool upCount;
+        [SerializeField]
+        private GameObject chargeEffect;
+        [SerializeField]
+        private GameObject shotEffect;
+        private ParticleSystem system;
+        private ParticleSystem childSystem;
+        private GameObject chargeObject;
+        private GameObject shotObject;
         // Start is called before the first frame update
         void Start()
         {
+            chargeObject = Instantiate(chargeEffect, this.gameObject.transform);
+            system = chargeObject.GetComponent<ParticleSystem>();
+            childSystem = chargeObject.transform.GetChild(1).GetComponent<ParticleSystem>();
+            system.Stop();
+
+            shotObject = Instantiate(shotEffect, this.gameObject.transform);
+            shotObject.GetComponent<ParticleSystem>().Stop();
+
             counting = false;
         }
 
@@ -31,7 +47,7 @@ namespace Valve.VR.InteractionSystem
                 }
                 else
                 {
-                    countTime -= Time.deltaTime;
+                    countTime -= Time.deltaTime * 3;
                     if (countTime <= 0)
                     {
                         upCount = !upCount;
@@ -40,7 +56,6 @@ namespace Valve.VR.InteractionSystem
                 
                
             }
-            Debug.Log(countTime);
         }
 
         public void StartCount()
@@ -50,16 +65,24 @@ namespace Valve.VR.InteractionSystem
                 counting = true;
                 upCount = true;
                 countTime = 0;
+
+                system.Play();
             }
         }
 
         public void EndCount()
         {
             counting = false;
+            childSystem.Clear();
+            system.Stop(true, ParticleSystemStopBehavior.StopEmitting);
         }
 
         public int GetBowNum()
         {
+            childSystem.Clear();
+            system.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            shotObject.GetComponent<ParticleSystem>().Play();
+
             if (countTime > 2.0)
             {
                 return 2;

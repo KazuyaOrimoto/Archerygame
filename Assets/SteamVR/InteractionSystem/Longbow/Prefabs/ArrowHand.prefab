@@ -254,6 +254,8 @@ MonoBehaviour:
   positionLerpThreshold: 0.15
   arrowSpawnSound: {fileID: 11498220}
   maxArrowCount: 10
+  arrowDeleteCount: {fileID: 3646975266165274176, guid: 56aba5f9ff413a043be373547a36f7e5,
+    type: 3}
 --- !u!114 &11426438
 MonoBehaviour:
   m_ObjectHideFlags: 0

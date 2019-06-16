@@ -47,9 +47,9 @@ namespace Valve.VR.InteractionSystem
 		private const float bowPullPulseStrengthHigh = 500;
 		private Vector3 bowLeftVector;
 
-		public float arrowMinVelocity = 35f;
-		public float arrowMaxVelocity = 70f;
-		private float arrowVelocity = 70f;
+		public float arrowMinVelocity = 50f;
+		public float arrowMaxVelocity = 80f;
+		private float arrowVelocity = 80f;
 
 		private float minStrainTickTime = 0.1f;
 		private float maxStrainTickTime = 0.5f;
@@ -81,8 +81,16 @@ namespace Valve.VR.InteractionSystem
 
         public Charge charge;
 
-		//-------------------------------------------------
-		private void OnAttachedToHand( Hand attachedHand )
+        private void Start()
+        {
+            if(charge == null)
+            {
+                charge = GetComponent<Charge>();
+            }
+        }
+
+        //-------------------------------------------------
+        private void OnAttachedToHand( Hand attachedHand )
 		{
 			hand = attachedHand;
 		}

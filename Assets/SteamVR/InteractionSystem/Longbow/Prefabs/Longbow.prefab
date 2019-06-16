@@ -1920,7 +1920,7 @@ MonoBehaviour:
   arrowSlideSound: {fileID: 11466562}
   releaseSound: {fileID: 11462188}
   nockSound: {fileID: 11498608}
-  ChaegeGameObject: {fileID: 0}
+  charge: {fileID: 0}
 --- !u!114 &11496238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2045,6 +2045,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405b010dee5e80b44b278f57b39ce797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chargeEffect: {fileID: 3808091861202217266, guid: 508797cf4b95d124f95d848d1b186f7b,
+    type: 3}
+  shotEffect: {fileID: 1902630951124823970, guid: 8efc7b1507d1e1148830bfb1dbc8733b,
+    type: 3}
 --- !u!1 &173948
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: d85480da87762944399dab6c99985eef
-timeCreated: 1544851869
-licenseType: Store
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - arrowPrefab: {instanceID: 0}
+  - arrowNockTransform: {instanceID: 0}
+  - arrowSpawnSound: {instanceID: 0}
+  - arrowDeleteCount: {fileID: 3646975266165274176, guid: 56aba5f9ff413a043be373547a36f7e5,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
