@@ -9,6 +9,7 @@ public class MoveEnemy : MonoBehaviour
     [SerializeField]
     private float moveSpeed;
     // Start is called before the first frame update
+
     void Start()
     {
         if(targetObj == null)

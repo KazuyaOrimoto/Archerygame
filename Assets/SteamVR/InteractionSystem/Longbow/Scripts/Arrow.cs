@@ -37,6 +37,8 @@ namespace Valve.VR.InteractionSystem
 
 		private GameObject scaleParentObject = null;
 
+        public int damege { get; set; }
+
 
 		//-------------------------------------------------
 		void Start()

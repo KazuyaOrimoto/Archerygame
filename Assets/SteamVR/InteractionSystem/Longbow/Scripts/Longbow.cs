@@ -12,9 +12,10 @@ namespace Valve.VR.InteractionSystem
 {
 	//-------------------------------------------------------------------------
 	[RequireComponent( typeof( Interactable ) )]
+    [RequireComponent (typeof (Charge))]
 	public class Longbow : MonoBehaviour
 	{
-		public enum Handedness { Left, Right };
+        public enum Handedness { Left, Right };
 
 		public Handedness currentHandGuess = Handedness.Left;
 		private float timeOfPossibleHandSwitch = 0f;
@@ -78,6 +79,7 @@ namespace Valve.VR.InteractionSystem
 
 		SteamVR_Events.Action newPosesAppliedAction;
 
+        public Charge charge;
 
 		//-------------------------------------------------
 		private void OnAttachedToHand( Hand attachedHand )
@@ -85,6 +87,21 @@ namespace Valve.VR.InteractionSystem
 			hand = attachedHand;
 		}
 
+        private void ChargeCountStart()
+        {
+            if(charge == null)
+            {
+                charge = GetComponent<Charge>();
+            }
+            charge.StartCount();
+        }
+
+        public int GetBowNum()
+        {
+            int bowNum = charge.GetBowNum();
+            charge.EndCount();
+            return bowNum;
+        }
 
 		//-------------------------------------------------
 		private void HandAttachedUpdate( Hand hand )
@@ -99,11 +116,14 @@ namespace Valve.VR.InteractionSystem
             //トリガーを引いて弓を構えた時
 			if ( nocked )
 			{
-				Vector3 nockToarrowHand = ( arrowHand.arrowNockTransform.parent.position - nockRestTransform.position ); // Vector from bow nock transform to arrowhand nock transform - used to align bow when drawing
 
-				// Align bow
-				// Time lerp value used for ramping into drawn bow orientation
-				float lerp = Util.RemapNumberClamped( Time.time, nockLerpStartTime, ( nockLerpStartTime + lerpDuration ), 0f, 1f );
+                ChargeCountStart();
+
+                Vector3 nockToarrowHand = ( arrowHand.arrowNockTransform.parent.position - nockRestTransform.position ); // Vector from bow nock transform to arrowhand nock transform - used to align bow when drawing
+
+                // Align bow
+                // Time lerp value used for ramping into drawn bow orientation
+                float lerp = Util.RemapNumberClamped( Time.time, nockLerpStartTime, ( nockLerpStartTime + lerpDuration ), 0f, 1f );
 
 				float pullLerp = Util.RemapNumberClamped( nockToarrowHand.magnitude, minPull, maxPull, 0f, 1f ); // Normalized current state of bow draw 0 - 1
 
@@ -173,6 +193,7 @@ namespace Valve.VR.InteractionSystem
 			}
 			else
 			{
+                charge.EndCount();
 				if ( lerpBackToZeroRotation )
 				{
 					float lerp = Util.RemapNumber( Time.time, lerpStartTime, lerpStartTime + lerpDuration, 0, 1 );

@@ -237,7 +237,10 @@ namespace Valve.VR.InteractionSystem
             arrow.arrowHeadRB.useGravity = true;
             arrow.arrowHeadRB.transform.GetComponent<BoxCollider>().enabled = true;
 
-            for (int i = -2; i <= 2; i++)
+            //弓の生成
+            int bouNum = bow.GetBowNum();
+
+            for (int i = -bouNum; i <= bouNum; i++)
             {
                 GameObject arrowCopy = Instantiate(currentArrow, bow.transform, false);
                 arrowCopy.transform.parent = null;
@@ -251,6 +254,7 @@ namespace Valve.VR.InteractionSystem
 
                 arrowCopy1.arrowHeadRB.AddForce(arrowCopy.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange);
                 arrowCopy1.arrowHeadRB.AddTorque(arrowCopy.transform.forward * 10);
+                arrowCopy1.damege = 300 / (bouNum * 2 + 1) ;
             }
 
             //         arrow.arrowHeadRB.AddForce( currentArrow.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange );
