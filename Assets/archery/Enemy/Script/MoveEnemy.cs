@@ -8,6 +8,8 @@ public class MoveEnemy : MonoBehaviour
     private GameObject targetObj;
     [SerializeField]
     private float moveSpeed;
+
+    private bool moveStop;
     // Start is called before the first frame update
 
     void Start()
@@ -16,11 +18,16 @@ public class MoveEnemy : MonoBehaviour
         {
             targetObj = GameObject.Find("EnemyTarget");
         }
+        moveStop = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(moveStop)
+        {
+            return;
+        }
         if(this.gameObject.transform.position != targetObj.transform.position)
         {
             Vector3 movePos = targetObj.transform.position - this.gameObject.transform.position;
@@ -36,5 +43,15 @@ public class MoveEnemy : MonoBehaviour
             }
 
         }
+    }
+
+    public void MoveStop()
+    {
+        moveStop = true;
+    }
+
+    public void MoveRestart()
+    {
+        moveStop = false;
     }
 }

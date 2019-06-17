@@ -24,6 +24,11 @@ public class Enemy : MonoBehaviour
         {
             GameObject effect = Instantiate(enemyDieEffect,this.gameObject.transform.position,this.gameObject.transform.rotation);
         }
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            Animator animator = GetComponent<Animator>();
+            animator.SetTrigger("Damaged");
+        }
     }
 
     [System.Obsolete]
@@ -45,6 +50,8 @@ public class Enemy : MonoBehaviour
             Arrow arrow = other.GetComponent<Arrow>();
             if (arrow != null)
             {
+                Animator animator = GetComponent<Animator>();
+                animator.SetTrigger("Damaged");
                 int damege = (int)(arrow.damege * ComboCountObject.GetComboBonus());
                 Debug.Log(damege);
                 hp -= damege;
@@ -54,6 +61,8 @@ public class Enemy : MonoBehaviour
 
                 ArrowDeleteCount arrowDeleteCount = arrow.DeleteAreaObject.GetComponent<ArrowDeleteCount>();
                 arrowDeleteCount.HitArrow();
+
+                GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
             }
             DestroyObject(other.gameObject);
         }
@@ -62,5 +71,15 @@ public class Enemy : MonoBehaviour
             DestroyObject(this.gameObject);
             GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
         }
+    }
+
+    public void MoveStop()
+    {
+        transform.parent.gameObject.GetComponent<MoveEnemy>().MoveStop();
+    }
+
+    public void MoveRestart()
+    {
+        transform.parent.gameObject.GetComponent<MoveEnemy>().MoveRestart();
     }
 }

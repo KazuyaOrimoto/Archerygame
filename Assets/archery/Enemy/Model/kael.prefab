@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4475772387523595252}
   - component: {fileID: 7763324779166078168}
   - component: {fileID: 3381839776854853009}
+  - component: {fileID: 2669125434451912430}
   m_Layer: 10
   m_Name: kael
   m_TagString: Untagged
@@ -93,6 +94,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDieEffect: {fileID: 2667835097544895758, guid: 47111a29742e0d34cb2007b122a4ecb1,
     type: 3}
+  hp: 450
+  ComboCountObject: {fileID: 0}
 --- !u!136 &3381839776854853009
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -107,3 +110,22 @@ CapsuleCollider:
   m_Height: 0.04
   m_Direction: 1
   m_Center: {x: -0.0000026775524, y: 0.0021704412, z: -0.000023439527}
+--- !u!95 &2669125434451912430
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475772387525793076}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dab063ff5e970af4caac95d1df7a2fb7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
