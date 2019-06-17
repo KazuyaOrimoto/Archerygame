@@ -23,6 +23,11 @@ public class Combo : MonoBehaviour
         Debug.Log("Hit");
     }
 
+    public int GetCombo()
+    {
+        return comboCount;
+    }
+
     public float GetComboBonus()
     {
         int comboBonus = (comboCount / 10);

@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private GameObject enemyDieEffect;
     [SerializeField]
-    private int hp = 300;
+    private int hp = 450;
     [SerializeField]
     private Combo ComboCountObject;
     // Start is called before the first frame update
@@ -48,7 +48,10 @@ public class Enemy : MonoBehaviour
                 int damege = (int)(arrow.damege * ComboCountObject.GetComboBonus());
                 Debug.Log(damege);
                 hp -= damege;
-                GameObject.Find("ComboCheck").GetComponent<Combo>().ArrowHit();
+                Combo comboCheckScript = GameObject.Find("ComboCheck").GetComponent<Combo>();
+                comboCheckScript.ArrowHit();
+                int combo = comboCheckScript.GetCombo();
+
                 ArrowDeleteCount arrowDeleteCount = arrow.DeleteAreaObject.GetComponent<ArrowDeleteCount>();
                 arrowDeleteCount.HitArrow();
             }
