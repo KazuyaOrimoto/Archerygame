@@ -10,13 +10,16 @@ public class MoveEnemy : MonoBehaviour
     private float moveSpeed;
 
     private bool moveStop;
+
+    private int targetNum = 1;
+
     // Start is called before the first frame update
 
     void Start()
     {
         if(targetObj == null)
         {
-            targetObj = GameObject.Find("EnemyTarget");
+            targetObj = GameObject.Find(this.gameObject.name + "EnemyTarget" + targetNum.ToString());
         }
         moveStop = false;
     }
@@ -34,8 +37,12 @@ public class MoveEnemy : MonoBehaviour
             //移動する距離が移動スピードより短ければ
             if(movePos.magnitude < moveSpeed)
             {
-                Destroy(this.gameObject);
-
+                targetNum++;
+                targetObj = GameObject.Find(this.gameObject.name + "EnemyTarget" + targetNum.ToString());
+                if(!targetObj)
+                {
+                    Destroy(gameObject);
+                }
             }
             else
             {
