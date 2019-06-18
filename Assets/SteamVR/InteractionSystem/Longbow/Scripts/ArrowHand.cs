@@ -261,6 +261,7 @@ namespace Valve.VR.InteractionSystem
                 arrowCopy1.arrowHeadRB.AddForce(arrowCopy.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange);
                 arrowCopy1.arrowHeadRB.AddTorque(arrowCopy.transform.forward * 10);
                 arrowCopy1.damege = 300 / (bouNum * 2 + 1) ;
+                arrowCopy1.ArrowReleased(100.0f);
             }
 
             //         arrow.arrowHeadRB.AddForce( currentArrow.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange );

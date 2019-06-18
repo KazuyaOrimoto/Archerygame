@@ -47,10 +47,10 @@ namespace Valve.VR.InteractionSystem
 		private const float bowPullPulseStrengthHigh = 500;
 		private Vector3 bowLeftVector;
 
-		public float arrowMinVelocity = 50f;
-		public float arrowMaxVelocity = 80f;
-		private float arrowVelocity = 80f;
-
+		public float arrowMinVelocity = 150f;
+		public float arrowMaxVelocity = 150f;
+		private float arrowVelocity = 150f;
+      
 		private float minStrainTickTime = 0.1f;
 		private float maxStrainTickTime = 0.5f;
 		private float nextStrainTick = 0;

@@ -15,6 +15,11 @@ public class MoveEnemy : MonoBehaviour
 
     // Start is called before the first frame update
 
+    private float x;
+    private float y;
+    private float z;
+
+
     void Start()
     {
         if(targetObj == null)
@@ -22,6 +27,9 @@ public class MoveEnemy : MonoBehaviour
             targetObj = GameObject.Find(this.gameObject.name + "EnemyTarget" + targetNum.ToString());
         }
         moveStop = false;
+        x = Random.Range(-2.0f, 2.0f);
+        y = Random.Range(0, 2.0f);
+        z = Random.Range(-2.0f, 2.0f);
     }
 
     // Update is called once per frame
@@ -33,13 +41,16 @@ public class MoveEnemy : MonoBehaviour
         }
         if(this.gameObject.transform.position != targetObj.transform.position)
         {
-            Vector3 movePos = targetObj.transform.position - this.gameObject.transform.position;
+            Vector3 movePos = (targetObj.transform.position + new Vector3(x,y,z)) - this.gameObject.transform.position;
             //移動する距離が移動スピードより短ければ
             if(movePos.magnitude < moveSpeed)
             {
                 targetNum++;
                 targetObj = GameObject.Find(this.gameObject.name + "EnemyTarget" + targetNum.ToString());
-                if(!targetObj)
+                x = Random.Range(-2.0f, 2.0f);
+                y = Random.Range(0, 2.0f);
+                z = Random.Range(-2.0f, 2.0f);
+                if (!targetObj)
                 {
                     Destroy(gameObject);
                 }

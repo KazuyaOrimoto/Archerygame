@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private GameObject enemyDieEffect;
     [SerializeField]
-    private int hp = 450;
+    private int hp = 350;
     [SerializeField]
     private Combo ComboCountObject;
     // Start is called before the first frame update
