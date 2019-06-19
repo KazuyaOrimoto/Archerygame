@@ -240,7 +240,7 @@ namespace Valve.VR.InteractionSystem
             arrow.arrowHeadRB.transform.GetComponent<BoxCollider>().enabled = true;
 
             //弓の生成
-            int bouNum = bow.GetBowNum();
+            int bouNum = bow.GetArrowNum();
 
             GameObject arrowDeleteObject = Instantiate(arrowDeleteCount,null);
             arrowDeleteObject.GetComponent<ArrowDeleteCount>().SetArrowNum(bouNum * 2 + 1);

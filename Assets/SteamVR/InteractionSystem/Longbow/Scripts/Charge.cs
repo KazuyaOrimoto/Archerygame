@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace Valve.VR.InteractionSystem
 {
     public class Charge : MonoBehaviour
     {
+        int bonusArrowNum = 0;
         private float countTime;
         private bool counting;
-        private bool upCount;
         [SerializeField]
         private GameObject chargeEffect;
         [SerializeField]
         private GameObject shotEffect;
         private ParticleSystem system;
-        private ParticleSystem childSystem;
+        private ParticleSystem childSystem1;
+        private ParticleSystem childSystem2;
         private GameObject chargeObject;
         private GameObject shotObject;
         // Start is called before the first frame update
@@ -23,13 +23,16 @@ namespace Valve.VR.InteractionSystem
         {
             chargeObject = Instantiate(chargeEffect, this.gameObject.transform);
             system = chargeObject.GetComponent<ParticleSystem>();
-            childSystem = chargeObject.transform.GetChild(1).GetComponent<ParticleSystem>();
+            childSystem1 = chargeObject.transform.GetChild(1).GetComponent<ParticleSystem>();
+            childSystem2 = chargeObject.transform.GetChild(2).GetComponent<ParticleSystem>();
             system.Stop();
+
 
             shotObject = Instantiate(shotEffect, this.gameObject.transform);
             shotObject.GetComponent<ParticleSystem>().Stop();
 
             counting = false;
+            bonusArrowNum = 0;
         }
 
         // Update is called once per frame
@@ -37,24 +40,23 @@ namespace Valve.VR.InteractionSystem
         {
             if (counting)
             {
-                if(upCount)
+                countTime += Time.deltaTime;
+                if(countTime >= 3.0)
                 {
-                    countTime += Time.deltaTime;
-                    if (countTime >= 3.0)
+                    bonusArrowNum++;
+                    //childSystem2.Clear();
+                    //childSystem2.Play();
+                    countTime = 0;
+                    if (bonusArrowNum > 2)
                     {
-                        upCount = !upCount;
+                        bonusArrowNum = 2;
+                    }
+                    else
+                    {
+                        system.Clear();
+                        system.Play();
                     }
                 }
-                else
-                {
-                    countTime -= Time.deltaTime * 3;
-                    if (countTime <= 0)
-                    {
-                        upCount = !upCount;
-                    }
-                }
-                
-               
             }
         }
 
@@ -63,9 +65,7 @@ namespace Valve.VR.InteractionSystem
             if (!counting)
             {
                 counting = true;
-                upCount = true;
                 countTime = 0;
-
                 system.Play();
             }
         }
@@ -73,28 +73,20 @@ namespace Valve.VR.InteractionSystem
         public void EndCount()
         {
             counting = false;
-            childSystem.Clear();
+            childSystem1.Clear();
+            childSystem2.Clear();
             system.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            bonusArrowNum = 0;
         }
 
-        public int GetBowNum()
+        public int GetArrowNum()
         {
-            childSystem.Clear();
+            childSystem1.Clear();
+            childSystem2.Clear();
             system.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             shotObject.GetComponent<ParticleSystem>().Play();
 
-            if (countTime > 2.0)
-            {
-                return 2;
-            }
-            else if (countTime > 1.0)
-            {
-                return 1;
-            }
-            else
-            {
-                return 0;
-            }
+            return bonusArrowNum;
         }
     }
 

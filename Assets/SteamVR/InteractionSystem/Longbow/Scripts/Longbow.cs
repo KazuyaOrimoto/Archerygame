@@ -104,9 +104,9 @@ namespace Valve.VR.InteractionSystem
             charge.StartCount();
         }
 
-        public int GetBowNum()
+        public int GetArrowNum()
         {
-            int bowNum = charge.GetBowNum();
+            int bowNum = charge.GetArrowNum();
             charge.EndCount();
             return bowNum;
         }
