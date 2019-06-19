@@ -205,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CreateGameObject: {fileID: 8835034475302119327, guid: 795b9d070ba4ace4a9784fe18fcd79e4,
     type: 3}
-  RespawnTime: 10
+  RespawnTime: 5
   RespawnTimeRange: 1
 --- !u!4 &372767220
 Transform:
@@ -608,7 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CreateGameObject: {fileID: 673498117134889091, guid: 3e36c6737d55c304b961bf3ddd91dfd3,
     type: 3}
-  RespawnTime: 10
+  RespawnTime: 5
   RespawnTimeRange: 1
 --- !u!4 &1489509073
 Transform:

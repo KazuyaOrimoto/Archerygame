@@ -39,8 +39,6 @@ namespace Valve.VR.InteractionSystem
 
         public GameObject DeleteAreaObject { get; set; }
 
-        public int damege { get; set; }
-
         [SerializeField]
         private float speed = 10;
 
