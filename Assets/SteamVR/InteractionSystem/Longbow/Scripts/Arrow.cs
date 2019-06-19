@@ -42,7 +42,7 @@ namespace Valve.VR.InteractionSystem
         public int damege { get; set; }
 
         [SerializeField]
-        private float speed = 30;
+        private float speed = 10;
 
 
 		//-------------------------------------------------
@@ -59,10 +59,10 @@ namespace Valve.VR.InteractionSystem
 			{
 				prevPosition = transform.position;
 				prevRotation = transform.rotation;
-				prevVelocity = GetComponent<Rigidbody>().velocity;
-                GetComponent<Rigidbody>().AddForce(prevVelocity / 10);
+				//prevVelocity = GetComponent<Rigidbody>().velocity;
                 prevHeadPosition = arrowHeadRB.transform.position;
 				travelledFrames++;
+                transform.position += transform.forward * speed * Time.deltaTime;
 			}
 		}
 
@@ -73,7 +73,6 @@ namespace Valve.VR.InteractionSystem
 			inFlight = true;
 			released = true;
 
-            GetComponent<move>().CanMove();
 
 			airReleaseSound.Play();
 
@@ -103,7 +102,7 @@ namespace Valve.VR.InteractionSystem
 			prevPosition = transform.position;
 			prevRotation = transform.rotation;
 			prevHeadPosition = arrowHeadRB.transform.position;
-			prevVelocity = GetComponent<Rigidbody>().velocity;
+			//prevVelocity = GetComponent<Rigidbody>().velocity;
 
             SetCollisionMode(CollisionDetectionMode.ContinuousDynamic);
 
