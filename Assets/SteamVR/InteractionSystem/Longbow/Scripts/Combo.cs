@@ -20,7 +20,7 @@ public class Combo : MonoBehaviour
     public void ArrowHit()
     {
         comboCount++;
-        Debug.Log("Hit");
+        Debug.Log(comboCount);
     }
 
     public int GetCombo()
@@ -30,19 +30,20 @@ public class Combo : MonoBehaviour
 
     public float GetComboBonus()
     {
-        int comboBonus = (comboCount / 10);
-        if(comboBonus > 5)
+        float comboBonus;
+
+        comboBonus = comboCount / 10;
+
+        if(comboBonus > 2.0)
         {
-            comboBonus = 5;
+            comboBonus = 2.0f;
         }
-        float bonus = 1.0f + (comboBonus / 10);
-        return bonus;
+        return comboBonus;
     }
 
     public void ResetComboCount()
     {
         comboCount = 0;
-        Debug.Log("Reset");
     }
 
 }

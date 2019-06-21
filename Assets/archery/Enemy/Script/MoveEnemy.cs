@@ -7,7 +7,7 @@ public class MoveEnemy : MonoBehaviour
     [SerializeField]
     private GameObject targetObj;
     [SerializeField]
-    private float moveSpeed;
+    private float moveSpeed = 0.0f;
 
     private bool moveStop;
 

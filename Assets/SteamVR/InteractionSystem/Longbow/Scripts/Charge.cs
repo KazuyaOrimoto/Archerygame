@@ -10,14 +10,17 @@ namespace Valve.VR.InteractionSystem
         private float countTime;
         private bool counting;
         [SerializeField]
-        private GameObject chargeEffect;
+        private GameObject chargeEffect = null;
         [SerializeField]
-        private GameObject shotEffect;
+        private GameObject shotEffect = null;
         private ParticleSystem system;
         private ParticleSystem childSystem1;
         private ParticleSystem childSystem2;
         private GameObject chargeObject;
         private GameObject shotObject;
+        private Combo comboChecker = null;
+        private const float chargeTime = 3.0f;
+        private float chargeTimeBonus = 0.0f;
         // Start is called before the first frame update
         void Start()
         {
@@ -33,6 +36,8 @@ namespace Valve.VR.InteractionSystem
 
             counting = false;
             bonusArrowNum = 0;
+
+            comboChecker = GameObject.Find("ComboCheck").GetComponent<Combo>();
         }
 
         // Update is called once per frame
@@ -41,7 +46,7 @@ namespace Valve.VR.InteractionSystem
             if (counting)
             {
                 countTime += Time.deltaTime;
-                if(countTime >= 3.0)
+                if(countTime >= chargeTime)
                 {
                     bonusArrowNum++;
                     //childSystem2.Clear();
@@ -67,6 +72,7 @@ namespace Valve.VR.InteractionSystem
                 counting = true;
                 countTime = 0;
                 system.Play();
+                chargeTimeBonus = comboChecker.GetComboBonus();
             }
         }
 

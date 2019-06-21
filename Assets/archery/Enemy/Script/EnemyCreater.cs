@@ -5,9 +5,9 @@ using UnityEngine;
 public class EnemyCreater : MonoBehaviour
 {
     [SerializeField]
-    private GameObject CreateGameObject;
+    private GameObject CreateGameObject = null;
     [SerializeField]
-    private float RespawnTime;
+    private float RespawnTime = 0.0f;
     [SerializeField]
     private float RespawnTimeRange = 1.0f;
     private float RespawnTimeAddNum;

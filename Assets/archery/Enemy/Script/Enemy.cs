@@ -6,7 +6,7 @@ using Valve.VR.InteractionSystem;
 public class Enemy : MonoBehaviour
 {
     [SerializeField]
-    private GameObject enemyDieEffect;
+    private GameObject enemyDieEffect = null;
     [SerializeField]
     private Combo ComboCountObject;
     // Start is called before the first frame update
@@ -56,9 +56,9 @@ public class Enemy : MonoBehaviour
                 arrowDeleteCount.HitArrow();
             }
             DestroyObject(other.gameObject);
-        }
             DestroyObject(this.gameObject);
             GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
+        }
     }
 
     public void MoveStop()
