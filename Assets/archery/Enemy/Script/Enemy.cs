@@ -50,14 +50,14 @@ public class Enemy : MonoBehaviour
             {
                 Animator animator = GetComponent<Animator>();
                 animator.SetTrigger("Damaged");
-                Combo comboCheckScript = GameObject.Find("ComboCheck").GetComponent<Combo>();
-                comboCheckScript.ArrowHit();
+                ComboCountObject.ArrowHit();
                 ArrowDeleteCount arrowDeleteCount = arrow.DeleteAreaObject.GetComponent<ArrowDeleteCount>();
                 arrowDeleteCount.HitArrow();
             }
             DestroyObject(other.gameObject);
             DestroyObject(this.gameObject);
             GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
+            int comboNum = ComboCountObject.GetCombo();
         }
     }
 
