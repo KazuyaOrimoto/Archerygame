@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1b39ff023bf0c084291b1000f05ebe65
+guid: f13e6f06e1f2f8b489eeee4deb985ae3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -29,7 +29,7 @@ ModelImporter:
     400020: transform2
     400022: transform3
     400024: transform4
-    2100000: aiStandardSurface1
+    2100000: lambert3
     2300000: pCube5
     2300002: pCube6
     2300004: pCylinder1

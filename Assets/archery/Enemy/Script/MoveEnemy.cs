@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class MoveEnemy : MonoBehaviour
 {
-    [SerializeField]
+    private TargetObj targetFintObj;
     private GameObject targetObj;
+    private GameObject goalObject;
     [SerializeField]
     private float moveSpeed = 0.0f;
+
+    public int target { get; set; }
 
     private bool moveStop;
 
@@ -22,14 +25,25 @@ public class MoveEnemy : MonoBehaviour
 
     void Start()
     {
-        if(targetObj == null)
+        if(targetFintObj == null)
         {
-            targetObj = GameObject.Find(this.gameObject.name + "EnemyTarget" + targetNum.ToString());
+            string targetName = this.tag + "Target";
+            targetFintObj = GameObject.Find(targetName).GetComponent<TargetObj>();
         }
+        target = 0;
+        if (targetObj == null)
+        {
+            targetObj = targetFintObj.GetTargetObject(targetNum, this);
+            this.transform.LookAt(targetObj.transform);
+            transform.Rotate(new Vector3(0, 1, 0), 180);
+        }
+
         moveStop = false;
         x = Random.Range(-2.0f, 2.0f);
         y = Random.Range(0, 2.0f);
         z = Random.Range(-2.0f, 2.0f);
+
+        goalObject = GameObject.Find("EnemyGoal");
     }
 
     // Update is called once per frame
@@ -45,15 +59,18 @@ public class MoveEnemy : MonoBehaviour
             //移動する距離が移動スピードより短ければ
             if(movePos.magnitude < moveSpeed)
             {
-                targetNum++;
-                targetObj = GameObject.Find(this.gameObject.name + "EnemyTarget" + targetNum.ToString());
-                x = Random.Range(-2.0f, 2.0f);
-                y = Random.Range(0, 2.0f);
-                z = Random.Range(-2.0f, 2.0f);
-                if (!targetObj)
+                if(goalObject == targetObj)
                 {
                     Destroy(gameObject);
                 }
+                targetNum++;
+                targetObj = targetFintObj.GetTargetObject(targetNum, this);
+                x = Random.Range(-2.0f, 2.0f);
+                y = Random.Range(0, 2.0f);
+                z = Random.Range(-2.0f, 2.0f);
+                this.transform.LookAt(targetObj.transform);
+                transform.Rotate(new Vector3(0, 1, 0), 180);
+               
             }
             else
             {

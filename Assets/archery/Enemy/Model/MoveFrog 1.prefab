@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2146359464375922101}
   - component: {fileID: 189410609619533478}
   m_Layer: 0
-  m_Name: MoveFrog
-  m_TagString: Frog
+  m_Name: MoveFrog 1
+  m_TagString: Frog2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ PrefabInstance:
     - target: {fileID: 4475772387525793076, guid: e995ecdb954ea08428e4525482022f61,
         type: 3}
       propertyPath: m_TagString
-      value: Frog
+      value: Frog2
       objectReference: {fileID: 0}
     - target: {fileID: 4475772387526019348, guid: e995ecdb954ea08428e4525482022f61,
         type: 3}

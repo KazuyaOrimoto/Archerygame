@@ -18,15 +18,15 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            GameObject effect = Instantiate(enemyDieEffect,this.gameObject.transform.position,this.gameObject.transform.rotation);
-        }
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            Animator animator = GetComponent<Animator>();
-            animator.SetTrigger("Damaged");
-        }
+        //if(Input.GetKeyDown(KeyCode.E))
+        //{
+        //    GameObject effect = Instantiate(enemyDieEffect,this.gameObject.transform.position,this.gameObject.transform.rotation);
+        //}
+        //if(Input.GetKeyDown(KeyCode.A))
+        //{
+        //    Animator animator = GetComponent<Animator>();
+        //    animator.SetTrigger("Damaged");
+        //}
     }
 
     [System.Obsolete]
