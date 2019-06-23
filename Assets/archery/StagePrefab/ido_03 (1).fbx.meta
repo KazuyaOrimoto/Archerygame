@@ -1,52 +1,47 @@
 fileFormatVersion: 2
-guid: 44f7f48c97346474ca040f1a47a2e713
+guid: 1b39ff023bf0c084291b1000f05ebe65
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pCube1
-    100002: pCube10
-    100004: pCube11
-    100006: pCube2
-    100008: pCube3
-    100010: pCube4
-    100012: pCube5
-    100014: pCube8
-    100016: pCube9
-    100018: //RootNode
-    100020: transform1
-    100022: transform2
-    100024: transform3
-    100026: transform4
-    400000: pCube1
-    400002: pCube10
-    400004: pCube11
-    400006: pCube2
-    400008: pCube3
-    400010: pCube4
-    400012: pCube5
-    400014: pCube8
-    400016: pCube9
-    400018: //RootNode
-    400020: transform1
-    400022: transform2
-    400024: transform3
-    400026: transform4
-    2100000: lambert1
-    2300000: pCube10
-    2300002: pCube11
-    2300004: pCube3
-    2300006: pCube4
-    2300008: pCube5
-    3300000: pCube10
-    3300002: pCube11
-    3300004: pCube3
-    3300006: pCube4
-    3300008: pCube5
-    4300000: pCube3
-    4300002: pCube4
+    100000: //RootNode
+    100002: pCube1
+    100004: pCube2
+    100006: pCube3
+    100008: pCube4
+    100010: pCube5
+    100012: pCube6
+    100014: pCylinder1
+    100016: pCylinder2
+    100018: transform1
+    100020: transform2
+    100022: transform3
+    100024: transform4
+    400000: //RootNode
+    400002: pCube1
+    400004: pCube2
+    400006: pCube3
+    400008: pCube4
+    400010: pCube5
+    400012: pCube6
+    400014: pCylinder1
+    400016: pCylinder2
+    400018: transform1
+    400020: transform2
+    400022: transform3
+    400024: transform4
+    2100000: aiStandardSurface1
+    2300000: pCube5
+    2300002: pCube6
+    2300004: pCylinder1
+    2300006: pCylinder2
+    3300000: pCube5
+    3300002: pCube6
+    3300004: pCylinder1
+    3300006: pCylinder2
+    4300000: pCylinder1
+    4300002: pCylinder2
     4300004: pCube5
-    4300006: pCube10
-    4300008: pCube11
+    4300006: pCube6
   externalObjects: {}
   materials:
     importMaterials: 1
