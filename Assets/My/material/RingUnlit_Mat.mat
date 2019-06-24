@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RingUnlit_Mat
+  m_Name: Ring01Unlit_Mat
   m_Shader: {fileID: 4800000, guid: 195d4108fed66e842abe122c4595db9a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,9 +20,9 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_C991AA4:
-        m_Texture: {fileID: 2800000, guid: e440479320db8bd4ea26c9db9a7d5896, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2f45487ff3b21f242a91d3524e8ac569, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_B0D96B81: {r: 3.9999995, g: 3.9999995, b: 3.9999995, a: 0}
+    - Color_B0D96B81: {r: 1.4980392, g: 1.4980392, b: 1.4980392, a: 0}
