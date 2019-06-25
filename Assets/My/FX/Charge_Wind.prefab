@@ -4776,6 +4776,8 @@ GameObject:
   - component: {fileID: 3808091861202217261}
   - component: {fileID: 3808091861202217260}
   - component: {fileID: 3808091861202217267}
+  - component: {fileID: 2253825502245645256}
+  - component: {fileID: 8379242301305932470}
   m_Layer: 0
   m_Name: Charge_Wind
   m_TagString: Untagged
@@ -9466,6 +9468,44 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!320 &2253825502245645256
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3808091861202217266}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: aed3340c13e006c4c956b186ce8cbcce, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114191781926693876, guid: aed3340c13e006c4c956b186ce8cbcce, type: 2}
+    value: {fileID: 8379242301305932470}
+  m_ExposedReferences:
+    m_References: []
+--- !u!95 &8379242301305932470
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3808091861202217266}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3808091861382195610
 GameObject:
   m_ObjectHideFlags: 0

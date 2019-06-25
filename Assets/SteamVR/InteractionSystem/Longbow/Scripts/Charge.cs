@@ -24,7 +24,7 @@ namespace Valve.VR.InteractionSystem
         // Start is called before the first frame update
         void Start()
         {
-            chargeObject = Instantiate(chargeEffect, this.gameObject.transform);
+            chargeObject = Instantiate(chargeEffect, this.gameObject.transform.GetChild(0).GetChild(0));
             system = chargeObject.GetComponent<ParticleSystem>();
             //childSystem1 = chargeObject.transform.GetChild(1).GetComponent<ParticleSystem>();
             //childSystem2 = chargeObject.transform.GetChild(2).GetComponent<ParticleSystem>();

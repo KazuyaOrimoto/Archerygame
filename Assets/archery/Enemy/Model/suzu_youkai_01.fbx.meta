@@ -47,7 +47,12 @@ ModelImporter:
     2300000: pSphere3
     3300000: pSphere3
     4300000: pSphere3
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: suzuUV
+    second: {fileID: 2800000, guid: aa91a6d57f2627c47bfc987f90c3e8c1, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
