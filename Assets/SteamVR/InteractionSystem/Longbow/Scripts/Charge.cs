@@ -19,15 +19,15 @@ namespace Valve.VR.InteractionSystem
         private GameObject chargeObject;
         private GameObject shotObject;
         private Combo comboChecker = null;
-        private const float chargeTime = 3.0f;
+        private const float chargeTime = 1.1f;
         private float chargeTimeBonus = 0.0f;
         // Start is called before the first frame update
         void Start()
         {
             chargeObject = Instantiate(chargeEffect, this.gameObject.transform);
             system = chargeObject.GetComponent<ParticleSystem>();
-            childSystem1 = chargeObject.transform.GetChild(1).GetComponent<ParticleSystem>();
-            childSystem2 = chargeObject.transform.GetChild(2).GetComponent<ParticleSystem>();
+            //childSystem1 = chargeObject.transform.GetChild(1).GetComponent<ParticleSystem>();
+            //childSystem2 = chargeObject.transform.GetChild(2).GetComponent<ParticleSystem>();
             system.Stop();
 
 
@@ -58,8 +58,8 @@ namespace Valve.VR.InteractionSystem
                     }
                     else
                     {
-                        system.Clear();
-                        system.Play();
+                        //system.Clear();
+                        //system.Play();
                     }
                 }
             }
@@ -72,23 +72,23 @@ namespace Valve.VR.InteractionSystem
                 counting = true;
                 countTime = 0;
                 system.Play();
-                chargeTimeBonus = comboChecker.GetComboBonus();
+                //chargeTimeBonus = comboChecker.GetComboBonus();
             }
         }
 
         public void EndCount()
         {
             counting = false;
-            childSystem1.Clear();
-            childSystem2.Clear();
+            //childSystem1.Clear();
+            //childSystem2.Clear();
             system.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             bonusArrowNum = 0;
         }
 
         public int GetArrowNum()
         {
-            childSystem1.Clear();
-            childSystem2.Clear();
+            //childSystem1.Clear();
+            //childSystem2.Clear();
             system.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             shotObject.GetComponent<ParticleSystem>().Play();
 

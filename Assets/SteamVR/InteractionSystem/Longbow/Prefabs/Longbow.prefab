@@ -2045,7 +2045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405b010dee5e80b44b278f57b39ce797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeEffect: {fileID: 3808091861202217266, guid: 508797cf4b95d124f95d848d1b186f7b,
+  chargeEffect: {fileID: 6847321878798658118, guid: 1c9acd9e4a54c4e409f8b243d14ab61a,
     type: 3}
   shotEffect: {fileID: 1902630951124823970, guid: 8efc7b1507d1e1148830bfb1dbc8733b,
     type: 3}

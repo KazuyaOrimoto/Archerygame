@@ -61,6 +61,7 @@ public class MoveEnemy : MonoBehaviour
             {
                 if(goalObject == targetObj)
                 {
+                    GameObject.Find("Barrier").GetComponent<Barrier>().AttackedEnemy();
                     Destroy(gameObject);
                 }
                 targetNum++;
