@@ -13,9 +13,6 @@ namespace Valve.VR.InteractionSystem
         private GameObject chargeEffect = null;
         [SerializeField]
         private GameObject shotEffect = null;
-        private ParticleSystem system;
-        private ParticleSystem childSystem1;
-        private ParticleSystem childSystem2;
         private GameObject chargeObject;
         private GameObject shotObject;
         private Combo comboChecker = null;
@@ -24,18 +21,12 @@ namespace Valve.VR.InteractionSystem
         // Start is called before the first frame update
         void Start()
         {
-            chargeObject = Instantiate(chargeEffect, this.gameObject.transform.GetChild(0).GetChild(0));
-            system = chargeObject.GetComponent<ParticleSystem>();
-            //childSystem1 = chargeObject.transform.GetChild(1).GetComponent<ParticleSystem>();
-            //childSystem2 = chargeObject.transform.GetChild(2).GetComponent<ParticleSystem>();
-            system.Stop();
-
+            //chargeObject = Instantiate(chargeEffect, this.gameObject.transform.GetChild(0).GetChild(0));
 
             shotObject = Instantiate(shotEffect, this.gameObject.transform);
             shotObject.GetComponent<ParticleSystem>().Stop();
 
             counting = false;
-            bonusArrowNum = 0;
 
             comboChecker = GameObject.Find("ComboCheck").GetComponent<Combo>();
         }
@@ -45,23 +36,7 @@ namespace Valve.VR.InteractionSystem
         {
             if (counting)
             {
-                countTime += Time.deltaTime;
-                if(countTime >= chargeTime)
-                {
-                    bonusArrowNum++;
-                    //childSystem2.Clear();
-                    //childSystem2.Play();
-                    countTime = 0;
-                    if (bonusArrowNum > 2)
-                    {
-                        bonusArrowNum = 2;
-                    }
-                    else
-                    {
-                        //system.Clear();
-                        //system.Play();
-                    }
-                }
+                
             }
         }
 
@@ -71,8 +46,6 @@ namespace Valve.VR.InteractionSystem
             {
                 counting = true;
                 countTime = 0;
-                system.Play();
-                //chargeTimeBonus = comboChecker.GetComboBonus();
             }
         }
 
@@ -81,15 +54,25 @@ namespace Valve.VR.InteractionSystem
             counting = false;
             //childSystem1.Clear();
             //childSystem2.Clear();
-            system.Stop(true, ParticleSystemStopBehavior.StopEmitting);
-            bonusArrowNum = 0;
         }
 
         public int GetArrowNum()
         {
+            int combo = comboChecker.GetCombo();
+            if(combo <= 10)
+            {
+                bonusArrowNum = 2;
+            }
+            else if(combo <= 30)
+            {
+                bonusArrowNum = 1;
+            }
+            else
+            {
+                bonusArrowNum = 0;
+            }
             //childSystem1.Clear();
             //childSystem2.Clear();
-            system.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             shotObject.GetComponent<ParticleSystem>().Play();
 
             return bonusArrowNum;

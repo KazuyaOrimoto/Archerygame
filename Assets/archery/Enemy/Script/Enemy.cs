@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private Combo ComboCountObject;
     private UI UiObject;
+    private int hp = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +57,7 @@ public class Enemy : MonoBehaviour
                 ArrowDeleteCount arrowDeleteCount = arrow.DeleteAreaObject.GetComponent<ArrowDeleteCount>();
                 arrowDeleteCount.HitArrow();
             }
-            GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
+            //GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
             int comboNum = ComboCountObject.GetCombo();
             GameObject ui = UiObject.GetNumber(comboNum);
             ui.transform.position = this.transform.position;

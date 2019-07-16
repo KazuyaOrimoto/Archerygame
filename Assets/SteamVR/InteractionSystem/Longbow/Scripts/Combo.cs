@@ -20,6 +20,8 @@ public class Combo : MonoBehaviour
     public void ArrowHit()
     {
         comboCount++;
+        comboCount++;
+        comboCount++;
         Debug.Log(comboCount);
     }
 

@@ -241,6 +241,19 @@ namespace Valve.VR.InteractionSystem
 
             //弓の生成
             int bouNum = bow.GetArrowNum();
+            int damage;
+            if(bouNum == 1)
+            {
+                damage = 3;
+            }
+            else if(bouNum == 3)
+            {
+                damage = 2;
+            }
+            else
+            {
+                damage = 1;
+            }
 
             GameObject arrowDeleteObject = Instantiate(arrowDeleteCount,null);
             arrowDeleteObject.GetComponent<ArrowDeleteCount>().SetArrowNum(bouNum * 2 + 1);
@@ -261,9 +274,10 @@ namespace Valve.VR.InteractionSystem
                 arrowCopy1.arrowHeadRB.AddForce(arrowCopy.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange);
                 arrowCopy1.arrowHeadRB.AddTorque(arrowCopy.transform.forward * 10);
                 arrowCopy1.ArrowReleased(100.0f);
+                arrowCopy1.damage = damage;
             }
 
-            //         arrow.arrowHeadRB.AddForce( currentArrow.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange );
+            //arrow.arrowHeadRB.AddForce( currentArrow.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange );
             //arrow.arrowHeadRB.AddTorque( currentArrow.transform.forward * 10 );
 
             nocked = false;
