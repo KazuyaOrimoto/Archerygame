@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private GameObject enemyDieEffect = null;
     [SerializeField]
+    private GameObject enemyHitEffect = null;
+    [SerializeField]
     private Combo ComboCountObject;
     private UI UiObject;
     private int hp = 3;
@@ -51,18 +53,26 @@ public class Enemy : MonoBehaviour
             Arrow arrow = other.GetComponent<Arrow>();
             if (arrow != null)
             {
+                hp -= arrow.damage;
                 Animator animator = GetComponent<Animator>();
                 animator.SetTrigger("Damaged");
                 ComboCountObject.ArrowHit();
                 ArrowDeleteCount arrowDeleteCount = arrow.DeleteAreaObject.GetComponent<ArrowDeleteCount>();
                 arrowDeleteCount.HitArrow();
             }
-            //GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
             int comboNum = ComboCountObject.GetCombo();
             GameObject ui = UiObject.GetNumber(comboNum);
             ui.transform.position = this.transform.position;
             DestroyObject(other.gameObject);
-            DestroyObject(this.gameObject);
+            if (hp <= 0)
+            {
+                DestroyObject(this.gameObject);
+                GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
+            }
+            else
+            {
+                GameObject effect = Instantiate(enemyHitEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
+            }
         }
     }
 

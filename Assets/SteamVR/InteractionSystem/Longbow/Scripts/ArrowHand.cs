@@ -242,11 +242,11 @@ namespace Valve.VR.InteractionSystem
             //弓の生成
             int bouNum = bow.GetArrowNum();
             int damage;
-            if(bouNum == 1)
+            if(bouNum == 0)
             {
                 damage = 3;
             }
-            else if(bouNum == 3)
+            else if(bouNum == 1)
             {
                 damage = 2;
             }
