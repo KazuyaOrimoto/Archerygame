@@ -23,8 +23,8 @@ namespace Valve.VR.InteractionSystem
         {
             //chargeObject = Instantiate(chargeEffect, this.gameObject.transform.GetChild(0).GetChild(0));
 
-            shotObject = Instantiate(shotEffect, this.gameObject.transform);
-            shotObject.GetComponent<ParticleSystem>().Stop();
+            //shotObject = Instantiate(shotEffect, this.gameObject.transform);
+            //shotObject.GetComponent<ParticleSystem>().Stop();
 
             counting = false;
 
@@ -73,7 +73,7 @@ namespace Valve.VR.InteractionSystem
             }
             //childSystem1.Clear();
             //childSystem2.Clear();
-            shotObject.GetComponent<ParticleSystem>().Play();
+            //shotObject.GetComponent<ParticleSystem>().Play();
 
             return bonusArrowNum;
         }
