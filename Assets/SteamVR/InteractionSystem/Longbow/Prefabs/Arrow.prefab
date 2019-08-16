@@ -1368,6 +1368,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArrowFX
       objectReference: {fileID: 0}
+    - target: {fileID: 6649195477380778892, guid: 7116c4338435fd046b415a24586ac346,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6649195477380778889, guid: 7116c4338435fd046b415a24586ac346,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1381,7 +1386,7 @@ PrefabInstance:
     - target: {fileID: 6649195477380778889, guid: 7116c4338435fd046b415a24586ac346,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.087
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6649195477380778889, guid: 7116c4338435fd046b415a24586ac346,
         type: 3}
@@ -1422,6 +1427,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649195476535789075, guid: 7116c4338435fd046b415a24586ac346,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7116c4338435fd046b415a24586ac346, type: 3}

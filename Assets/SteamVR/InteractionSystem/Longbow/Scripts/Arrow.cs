@@ -27,6 +27,8 @@ namespace Valve.VR.InteractionSystem
 		public SoundPlayOneshot airReleaseSound;
 		public SoundPlayOneshot hitTargetSound;
 
+        private GameObject arrowFX;
+
 		public PlaySound hitGroundSound;
 
 		private bool inFlight;
@@ -48,7 +50,9 @@ namespace Valve.VR.InteractionSystem
         void Start()
 		{
 			Physics.IgnoreCollision( shaftRB.GetComponent<Collider>(), Player.instance.headCollider );
-		}
+            arrowFX = transform.GetChild(2).gameObject;
+            arrowFX.SetActive(false);
+        }
 
 
 		//-------------------------------------------------
@@ -69,11 +73,17 @@ namespace Valve.VR.InteractionSystem
         //-------------------------------------------------
         public void ArrowReleased( float inputVelocity )
 		{
-			inFlight = true;
+            arrowFX = transform.GetChild(2).gameObject;
+
+            inFlight = true;
 			released = true;
 
+            arrowFX.SetActive(true);
+            ParticleSystem a = arrowFX.GetComponent<ParticleSystem>();
+            a.Clear();
+            a.Play();
 
-			airReleaseSound.Play();
+            airReleaseSound.Play();
 
 
 			if ( glintParticle != null )
