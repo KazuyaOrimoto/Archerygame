@@ -12,6 +12,8 @@ TagManager:
   - Frog
   - Frog2
   - Bell
+  - Skeleton2
+  - Skeleton3
   layers:
   - Default
   - TransparentFX

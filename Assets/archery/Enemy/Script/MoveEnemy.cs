@@ -40,7 +40,14 @@ public class MoveEnemy : MonoBehaviour
 
         moveStop = false;
         x = Random.Range(-2.0f, 2.0f);
-        y = Random.Range(0, 2.0f);
+        if(tag == "Frog" || tag == "Frog2")
+        {
+            y = 0.0f;
+        }
+        else
+        {
+            y = Random.Range(0, 2.0f);
+        }
         z = Random.Range(-2.0f, 2.0f);
 
         goalObject = GameObject.Find("EnemyGoal");

@@ -25,7 +25,15 @@ public class EnemyCreater : MonoBehaviour
         if (countTime > RespawnTime + RespawnTimeAddNum)
         {
             float x = Random.Range(-2.0f, 2.0f);
-            float y = Random.Range(   0  , 2.0f);
+            float y;
+            if (tag == "Frog" || tag == "Frog2")
+            {
+                y = 0.0f;
+            }
+            else
+            {
+                y = Random.Range(0, 2.0f);
+            }
             float z = Random.Range(-2.0f, 2.0f);
             GameObject cloneObj = Instantiate(CreateGameObject);
             cloneObj.transform.position = this.gameObject.transform.position + new Vector3(x, y, z);
