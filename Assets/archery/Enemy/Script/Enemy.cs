@@ -13,11 +13,15 @@ public class Enemy : MonoBehaviour
     private Combo ComboCountObject;
     private UI UiObject;
     private int hp = 3;
+    private GameObject player;
+
+    bool attack;
     // Start is called before the first frame update
     void Start()
     {
         ComboCountObject = GameObject.Find("ComboCheck").GetComponent<Combo>();
         UiObject = GameObject.Find("UIObject").GetComponent<UI>();
+        attack = false;
     }
 
     // Update is called once per frame
@@ -32,6 +36,12 @@ public class Enemy : MonoBehaviour
         //    Animator animator = GetComponent<Animator>();
         //    animator.SetTrigger("Damaged");
         //}
+        if(attack)
+        {
+            Debug.Log("Attack!!");
+            Attack();
+        }
+
     }
 
     [System.Obsolete]
@@ -74,6 +84,15 @@ public class Enemy : MonoBehaviour
                 GameObject effect = Instantiate(enemyHitEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
             }
         }
+
+        if(other.gameObject.tag == "PlayerArea")
+        {
+            attack = true;
+            MoveStop();
+            player = GameObject.FindGameObjectWithTag("Player");
+            this.transform.parent.LookAt(player.transform);
+            transform.parent.Rotate(new Vector3(0, 1, 0), 180);
+        }
     }
 
     public void MoveStop()
@@ -84,5 +103,10 @@ public class Enemy : MonoBehaviour
     public void MoveRestart()
     {
         transform.parent.gameObject.GetComponent<MoveEnemy>().MoveRestart();
+    }
+
+    private void Attack()
+    {
+
     }
 }

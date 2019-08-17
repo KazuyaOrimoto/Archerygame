@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3131792265806194973}
   - component: {fileID: 2130983556586088073}
   - component: {fileID: 6032714553478809117}
+  - component: {fileID: 6534201066329829783}
   m_Layer: 10
   m_Name: gaikotu
   m_TagString: Untagged
@@ -111,3 +112,19 @@ CapsuleCollider:
   m_Height: 0.030000001
   m_Direction: 1
   m_Center: {x: 0, y: -0.002, z: 0.00025722187}
+--- !u!54 &6534201066329829783
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3131792265804199897}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

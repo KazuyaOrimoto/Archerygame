@@ -14,6 +14,7 @@ TagManager:
   - Bell
   - Skeleton2
   - Skeleton3
+  - PlayerArea
   layers:
   - Default
   - TransparentFX
