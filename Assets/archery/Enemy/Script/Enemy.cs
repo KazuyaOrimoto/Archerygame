@@ -15,7 +15,15 @@ public class Enemy : MonoBehaviour
     private int hp = 3;
     private GameObject player;
 
-    bool attack;
+    private GameObject ChaegeEffect = null;
+    private GameObject AttackEffect = null;
+
+    GameObject effect;
+
+    bool attack = false;
+    bool attacked = false;
+    bool charged = false;
+    bool charge = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +46,6 @@ public class Enemy : MonoBehaviour
         //}
         if(attack)
         {
-            Debug.Log("Attack!!");
             Attack();
         }
 
@@ -107,6 +114,43 @@ public class Enemy : MonoBehaviour
 
     private void Attack()
     {
-
+        //チャージした後だったら
+        if(charged)
+        {
+            //攻撃した後だったら
+            if (attacked)
+            {
+                effect = null;
+                charge = false;
+                charged = false;
+                attacked = false;
+            }
+            //攻撃してたら
+            else
+            {
+                if(effect == null)
+                {
+                    attacked = true;
+                }
+            }
+        }
+        //チャージしてなかったら
+        else
+        {
+            //何もエフェクトを使ってなかったら
+            if(effect == null)
+            {
+                effect = Instantiate(ChaegeEffect,transform);
+                charge = true;
+            }
+            else
+            {
+                if(charge)
+                {
+                    effect = Instantiate(AttackEffect,transform);
+                    charged = true;
+                }
+            }
+        }
     }
 }
