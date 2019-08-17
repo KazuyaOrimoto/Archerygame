@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_FireBall01ToonTrail
+  m_Shader: {fileID: 4800000, guid: 22af8005e6012694bb4d4f0e164f75c9, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_30802C62_Texture:
+        m_Texture: {fileID: 2800000, guid: 68f45382cf7315847ae5932c4a7432cb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_57066F9B_Texture:
+        m_Texture: {fileID: 2800000, guid: 7014a6fd8e63ad945932f9046cbaf9c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_5C3A09E4_Texture:
+        m_Texture: {fileID: 2800000, guid: 7014a6fd8e63ad945932f9046cbaf9c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_C8CF7A60_Texture:
+        m_Texture: {fileID: 2800000, guid: 7014a6fd8e63ad945932f9046cbaf9c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_CA0F0580_Texture:
+        m_Texture: {fileID: 2800000, guid: 7014a6fd8e63ad945932f9046cbaf9c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_47CF4F3A: 0.5
+    - Vector1_60DC7410: 0.03
+    - Vector1_9426B388: 1
+    - Vector1_B57DB025: 1
+    m_Colors:
+    - Color_45695AC4: {r: 1, g: 1, b: 1, a: 1}
+    - Vector2_1623DA34: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_59AF978A: {r: 0.6, g: -1.4, b: 0, a: 0}
+    - Vector2_691FA985: {r: -1.5, g: 0, b: 0, a: 0}

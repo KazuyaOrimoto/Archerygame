@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Arrow1
+  m_Shader: {fileID: 4800000, guid: 32995887fcfde124298fd03d1670f967, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_A6FEE623:
+        m_Texture: {fileID: 2800000, guid: c74bed75e34bc7d43b7005c9e0d3a20f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_6A15EA11: 4
+    - Vector1_A39FEC2: 5
+    - Vector1_B18F2BA8: 35
+    m_Colors:
+    - Color_B4612E79: {r: 0.3148646, g: 0.41989163, b: 0.9674101, a: 0}
+    - Vector2_23F6CB0: {r: 1, g: 1, b: 0, a: 0}
