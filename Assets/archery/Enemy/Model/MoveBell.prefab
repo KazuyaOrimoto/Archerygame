@@ -45,6 +45,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
+--- !u!54 &5090559909384249276
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278937820841777925}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!135 &2737963617194257953
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -94,22 +110,10 @@ MonoBehaviour:
   enemyHitEffect: {fileID: 4436312580927929549, guid: 216ecfc604e14094b8938f6b1c41cb3d,
     type: 3}
   ComboCountObject: {fileID: 0}
---- !u!54 &5090559909384249276
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5278937820841777925}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  ChaegeEffect: {fileID: 8659965426203522838, guid: 6c260d4d5f6a0974fa1d861cb0840c5b,
+    type: 3}
+  AttackEffect: {fileID: 5409008266002464095, guid: e1b5d917052e52042bf4a4bc02c8040f,
+    type: 3}
 --- !u!1001 &5278937820841876923
 PrefabInstance:
   m_ObjectHideFlags: 0

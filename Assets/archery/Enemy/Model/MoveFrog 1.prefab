@@ -117,6 +117,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7763324779166078168, guid: e995ecdb954ea08428e4525482022f61,
+        type: 3}
+      propertyPath: ChaegeEffect
+      value: 
+      objectReference: {fileID: 6158903716263922258, guid: a58db07e9b578d14d9168796b87424fb,
+        type: 3}
+    - target: {fileID: 7763324779166078168, guid: e995ecdb954ea08428e4525482022f61,
+        type: 3}
+      propertyPath: AttackEffect
+      value: 
+      objectReference: {fileID: 2222558965104047621, guid: 44646b0f2d82ade448c1fb88c98fa686,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e995ecdb954ea08428e4525482022f61, type: 3}
 --- !u!4 &6525940593683344253 stripped

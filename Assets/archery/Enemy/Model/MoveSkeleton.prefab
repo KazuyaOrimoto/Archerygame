@@ -151,6 +151,10 @@ MonoBehaviour:
   enemyHitEffect: {fileID: 4436312580927929549, guid: 216ecfc604e14094b8938f6b1c41cb3d,
     type: 3}
   ComboCountObject: {fileID: 0}
+  ChaegeEffect: {fileID: 7169222539818505309, guid: b3d94cc94d3d80542820225649610174,
+    type: 3}
+  AttackEffect: {fileID: 1848431562631475508, guid: 35f687a131535ef42843c45526bbb2ab,
+    type: 3}
 --- !u!136 &6813734235673770530
 CapsuleCollider:
   m_ObjectHideFlags: 0

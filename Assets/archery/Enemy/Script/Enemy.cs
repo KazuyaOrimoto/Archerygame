@@ -14,9 +14,10 @@ public class Enemy : MonoBehaviour
     private UI UiObject;
     private int hp = 3;
     private GameObject player;
-
-    private GameObject ChaegeEffect = null;
-    private GameObject AttackEffect = null;
+    [SerializeField]
+    private GameObject ChaegeEffect;
+    [SerializeField]
+    private GameObject AttackEffect;
 
     GameObject effect;
 
@@ -140,14 +141,15 @@ public class Enemy : MonoBehaviour
             //何もエフェクトを使ってなかったら
             if(effect == null)
             {
-                effect = Instantiate(ChaegeEffect,transform);
+                effect = Instantiate(ChaegeEffect,transform.parent);
                 charge = true;
             }
             else
             {
                 if(charge)
                 {
-                    effect = Instantiate(AttackEffect,transform);
+                    effect = Instantiate(AttackEffect, transform.parent);
+                    effect.transform.LookAt(player.transform);
                     charged = true;
                 }
             }
