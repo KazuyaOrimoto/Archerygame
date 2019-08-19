@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
-public class Enemy : MonoBehaviour
+public class BellEnemy : MonoBehaviour
 {
     [SerializeField]
     private GameObject enemyDieEffect = null;
@@ -39,22 +39,11 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.E))
-        //{
-        //    GameObject effect = Instantiate(enemyDieEffect,this.gameObject.transform.position,this.gameObject.transform.rotation);
-        //}
-        //if(Input.GetKeyDown(KeyCode.A))
-        //{
-        //    Animator animator = GetComponent<Animator>();
-        //    animator.SetTrigger("Damaged");
-        //}
         if (attack)
         {
             Attack();
         }
-
     }
-
     [System.Obsolete]
     private void OnCollisionEnter(Collision collision)
     {
@@ -99,9 +88,9 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "PlayerArea")
         {
             attack = true;
-            MoveStop();
             this.transform.parent.LookAt(player.transform);
             transform.parent.Rotate(new Vector3(0, 1, 0), 180);
+            transform.parent.gameObject.GetComponent<MoveEnemy>().SetTarget(player);
         }
     }
 
@@ -122,6 +111,14 @@ public class Enemy : MonoBehaviour
 
     private void Attack()
     {
+        if((player.transform.position - transform.position).magnitude > 2.0)
+        {
+            return;
+        }
+        else
+        {
+            MoveStop();
+        }
         //チャージした後だったら
         if (charged)
         {

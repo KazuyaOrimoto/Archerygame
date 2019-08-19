@@ -4767,6 +4767,7 @@ GameObject:
   - component: {fileID: 5409008266002464094}
   - component: {fileID: 5409008266002464088}
   - component: {fileID: 5409008266002464089}
+  - component: {fileID: 7997377307916745992}
   m_Layer: 0
   m_Name: SuzuFlashFX
   m_TagString: Untagged
@@ -4801,7 +4802,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5409008266002464095}
   serializedVersion: 6
-  lengthInSec: 4
+  lengthInSec: 3
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -4876,7 +4877,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -9532,6 +9533,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &7997377307916745992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5409008266002464095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe325ea0c278d834caec5c535f4d3538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5409008266025535411
 GameObject:
   m_ObjectHideFlags: 0

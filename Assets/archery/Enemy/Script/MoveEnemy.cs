@@ -7,6 +7,8 @@ public class MoveEnemy : MonoBehaviour
     private TargetObj targetFintObj;
     private GameObject targetObj;
     private GameObject goalObject;
+    private Barrier barrier;
+    private Animator anim;
     [SerializeField]
     private float moveSpeed = 0.0f;
 
@@ -51,6 +53,8 @@ public class MoveEnemy : MonoBehaviour
         z = Random.Range(-2.0f, 2.0f);
 
         goalObject = GameObject.Find("EnemyGoal");
+        barrier = GameObject.Find("Barrier").GetComponent<Barrier>();
+        anim = transform.GetChild(0).GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -68,17 +72,27 @@ public class MoveEnemy : MonoBehaviour
             {
                 if(goalObject == targetObj)
                 {
-                    GameObject.Find("Barrier").GetComponent<Barrier>().AttackedEnemy();
-                    Destroy(gameObject);
+                    BarrierAttack();
                 }
-                targetNum++;
-                targetObj = targetFintObj.GetTargetObject(targetNum, this);
-                x = Random.Range(-2.0f, 2.0f);
-                y = Random.Range(0, 2.0f);
-                z = Random.Range(-2.0f, 2.0f);
-                this.transform.LookAt(targetObj.transform);
-                transform.Rotate(new Vector3(0, 1, 0), 180);
-               
+                else
+                {
+                    targetNum++;
+                    targetObj = targetFintObj.GetTargetObject(targetNum, this);
+                    if(goalObject == targetObj)
+                    {
+                        x = Random.Range(-1.5f, 1.5f);
+                        y = Random.Range(-1.5f, 1.5f);
+                        z = 0.0f;
+                    }
+                    else
+                    {
+                        x = Random.Range(-1.5f, 1.5f);
+                        y = Random.Range(0, 1.5f);
+                        z = Random.Range(-1.5f, 1.5f);
+                    }
+                    this.transform.LookAt(targetObj.transform);
+                    transform.Rotate(new Vector3(0, 1, 0), 180);
+                }
             }
             else
             {
@@ -86,6 +100,17 @@ public class MoveEnemy : MonoBehaviour
             }
 
         }
+    }
+
+    public void BarrierAttackAnim()
+    {
+        barrier.AttackedEnemy();
+    }
+
+    private void BarrierAttack()
+    {
+        anim.SetTrigger("BarrierAttack");
+        transform.forward =new Vector3(0.0f, 0.0f, 1.0f).normalized;
     }
 
     public void MoveStop()
@@ -96,5 +121,12 @@ public class MoveEnemy : MonoBehaviour
     public void MoveRestart()
     {
         moveStop = false;
+    }
+
+    public void SetTarget(GameObject game)
+    {
+        targetObj = game;
+        this.transform.LookAt(targetObj.transform);
+        transform.Rotate(new Vector3(0, 1, 0), 180);
     }
 }
