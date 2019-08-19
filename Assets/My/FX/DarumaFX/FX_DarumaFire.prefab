@@ -14141,6 +14141,7 @@ GameObject:
   - component: {fileID: 1919104699473505370}
   - component: {fileID: 8648373144611322668}
   - component: {fileID: 6593561117750655921}
+  - component: {fileID: 8767225925330815213}
   m_Layer: 0
   m_Name: FX_DarumaFire
   m_TagString: Untagged
@@ -14180,7 +14181,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -18905,6 +18906,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &8767225925330815213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169222539818505309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe325ea0c278d834caec5c535f4d3538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8123230128697618811
 GameObject:
   m_ObjectHideFlags: 0

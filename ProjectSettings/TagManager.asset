@@ -15,6 +15,7 @@ TagManager:
   - Skeleton2
   - Skeleton3
   - PlayerArea
+  - EnemyAttackEffect
   layers:
   - Default
   - TransparentFX

@@ -139,7 +139,7 @@ public class Enemy : MonoBehaviour
         else
         {
             //何もエフェクトを使ってなかったら
-            if(effect == null)
+            if(!charge)
             {
                 effect = Instantiate(ChaegeEffect,transform.parent);
                 charge = true;
@@ -148,9 +148,12 @@ public class Enemy : MonoBehaviour
             {
                 if(charge)
                 {
-                    effect = Instantiate(AttackEffect, transform.parent);
-                    effect.transform.LookAt(player.transform);
-                    charged = true;
+                    if(effect == null)
+                    {
+                        effect = Instantiate(AttackEffect, transform.parent);
+                        effect.transform.LookAt(player.transform);
+                        charged = true;
+                    }
                 }
             }
         }

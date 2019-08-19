@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class DestroyEffect : MonoBehaviour
 {
-    void OnEnable()
+    private void Start()
     {
-        StartCoroutine(ParticleWorking());
-    }
-
-    IEnumerator ParticleWorking()
-    {
-        var particle = GetComponent<ParticleSystem>();
-
-        yield return new WaitWhile(() => particle.IsAlive(true));
-
-        Destroy(this.gameObject);
+        ParticleSystem partcleSystem = GetComponent<ParticleSystem>();
+        //Delete object after duration.
+        Destroy(this.gameObject, (float)partcleSystem.main.duration);
     }
 }

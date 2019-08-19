@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterAttack : MonoBehaviour
+public class FireAttack : MonoBehaviour
 {
     private Rigidbody rigit;
     [SerializeField]
@@ -14,19 +14,15 @@ public class WaterAttack : MonoBehaviour
         this.transform.LookAt(player.transform);
         rigit = GetComponent<Rigidbody>();
         rigit.AddForce(this.transform.forward * Time.deltaTime * speed, ForceMode.Impulse);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     //private void OnCollisionEnter(Collision collision)
     //{
-    //    if(collision.transform.tag == "Player")
+    //    if (collision.transform.tag == "Player")
     //    {
     //        Destroy(this.gameObject);
     //    }
     //}
+
+    
 }
