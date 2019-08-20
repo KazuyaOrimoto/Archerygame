@@ -60,6 +60,11 @@ public class MoveEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(tag == "Frog" || tag == "Frog2")
+        {
+            y = 0.0f;
+            transform.position = new Vector3(transform.position.x,0.65f,transform.position.z);
+        }
         if(moveStop)
         {
             return;
@@ -81,13 +86,27 @@ public class MoveEnemy : MonoBehaviour
                     if(goalObject == targetObj)
                     {
                         x = Random.Range(-1.5f, 1.5f);
-                        y = Random.Range(-1.5f, 1.5f);
+                        if (tag == "Frog" || tag == "Frog2")
+                        {
+                            y = 0.0f;
+                        }
+                        else
+                        {
+                             y = Random.Range(-0.0f, 2.5f);
+                        }
                         z = 0.0f;
                     }
                     else
                     {
                         x = Random.Range(-1.5f, 1.5f);
-                        y = Random.Range(0, 1.5f);
+                        if (tag == "Frog" || tag == "Frog2")
+                        {
+                            y = 0.0f;
+                        }
+                        else
+                        {
+                            y = Random.Range(0, 1.5f);
+                        }
                         z = Random.Range(-1.5f, 1.5f);
                     }
                     this.transform.LookAt(targetObj.transform);

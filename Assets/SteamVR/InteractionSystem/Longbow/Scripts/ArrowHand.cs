@@ -224,7 +224,7 @@ namespace Valve.VR.InteractionSystem
             Destroy(gameObject);
         }
 
-
+        //弓を打つところ
         //-------------------------------------------------
         private void FireArrow()
         {
