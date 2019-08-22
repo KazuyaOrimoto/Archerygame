@@ -376,7 +376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 563579c505167f74e83a022fc5740d99, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 563579c505167f74e83a022fc5740d99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -448,12 +448,11 @@ Transform:
   - {fileID: 434940552}
   - {fileID: 644955488}
   - {fileID: 1197244740}
+  - {fileID: 1548954331}
   - {fileID: 2073895334}
   - {fileID: 262044587}
-  - {fileID: 1548954331}
-  - {fileID: 1038989154}
-  - {fileID: 802480097}
   - {fileID: 464353347}
+  - {fileID: 802480097}
   - {fileID: 2095977833}
   - {fileID: 1941076935}
   - {fileID: 1080819257}
@@ -570,7 +569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f95d51ad77029b48af94b0ea69e8838, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f95d51ad77029b48af94b0ea69e8838, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -846,7 +845,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 263879366}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472318609
 GameObject:
@@ -1240,7 +1239,7 @@ PrefabInstance:
     - target: {fileID: 1260095991154742588, guid: 8448ea58ecf8f644090c851e8d1ac5b8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1260095991154742588, guid: 8448ea58ecf8f644090c851e8d1ac5b8,
         type: 3}
@@ -1371,7 +1370,7 @@ PrefabInstance:
     - target: {fileID: 4161357801213202935, guid: a5a45b64705188840b7e6b938b5c5cc3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4161357801213202935, guid: a5a45b64705188840b7e6b938b5c5cc3,
         type: 3}
@@ -1560,6 +1559,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a3f0b5c15734049982ae1a30bcdb0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  specialSkill1: {fileID: 989838547122802303, guid: 1eb1c8422e5942542acf4ac624360657,
+    type: 3}
+  specialSkill2: {fileID: 5028853557242832349, guid: 00ded34a2ef0e424d9d9c30a9be6cff7,
+    type: 3}
+  specialSkill3: {fileID: 5525166409231223832, guid: 10e235a5d2501434eba2ad182ffdec37,
+    type: 3}
 --- !u!4 &1038989154
 Transform:
   m_ObjectHideFlags: 0
@@ -1571,8 +1576,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 263879366}
-  m_RootOrder: 8
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1080819257 stripped
 Transform:
@@ -1887,7 +1892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420908, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2348914, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2218,7 +2223,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 263879366}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1617840257
 GameObject:
@@ -2414,7 +2419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f13e6f06e1f2f8b489eeee4deb985ae3, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f13e6f06e1f2f8b489eeee4deb985ae3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2492,7 +2497,7 @@ PrefabInstance:
     - target: {fileID: 1521490083146396481, guid: 969091d45ec41784d8308ec1b38a9804,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1521490083146396481, guid: 969091d45ec41784d8308ec1b38a9804,
         type: 3}

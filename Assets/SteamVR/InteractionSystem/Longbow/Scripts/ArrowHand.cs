@@ -44,6 +44,8 @@ namespace Valve.VR.InteractionSystem
         [SerializeField]
         private GameObject arrowDeleteCount;
 
+        private Combo comboChecker = null;
+
         //-------------------------------------------------
         void Awake()
         {
@@ -52,6 +54,8 @@ namespace Valve.VR.InteractionSystem
             allowTeleport.overrideHoverLock = false;
 
             arrowList = new List<GameObject>();
+
+            comboChecker = GameObject.Find("ComboCheck").GetComponent<Combo>();
         }
 
 
@@ -228,65 +232,70 @@ namespace Valve.VR.InteractionSystem
         //-------------------------------------------------
         private void FireArrow()
         {
-            currentArrow.transform.parent = null;
-
-            Arrow arrow = currentArrow.GetComponent<Arrow>();
-            arrow.shaftRB.isKinematic = false;
-            arrow.shaftRB.useGravity = true;
-            arrow.shaftRB.transform.GetComponent<BoxCollider>().enabled = true;
-
-            arrow.arrowHeadRB.isKinematic = false;
-            arrow.arrowHeadRB.useGravity = true;
-            arrow.arrowHeadRB.transform.GetComponent<BoxCollider>().enabled = true;
-
-            //弓の生成
-            int bouNum = bow.GetArrowNum();
-            int damage;
-            if(bouNum == 0)
+            if(comboChecker.GetSpecialSkill() != null)
             {
-                damage = 3;
-            }
-            else if(bouNum == 1)
-            {
-                damage = 2;
+
             }
             else
             {
-                damage = 1;
+                currentArrow.transform.parent = null;
+
+                Arrow arrow = currentArrow.GetComponent<Arrow>();
+                arrow.shaftRB.isKinematic = false;
+                arrow.shaftRB.useGravity = true;
+                arrow.shaftRB.transform.GetComponent<BoxCollider>().enabled = true;
+
+                arrow.arrowHeadRB.isKinematic = false;
+                arrow.arrowHeadRB.useGravity = true;
+                arrow.arrowHeadRB.transform.GetComponent<BoxCollider>().enabled = true;
+
+                //弓の生成
+                int bouNum = bow.GetArrowNum();
+                int damage;
+                if (bouNum == 0)
+                {
+                    damage = 3;
+                }
+                else if (bouNum == 1)
+                {
+                    damage = 2;
+                }
+                else
+                {
+                    damage = 1;
+                }
+
+                GameObject arrowDeleteObject = Instantiate(arrowDeleteCount, null);
+                arrowDeleteObject.GetComponent<ArrowDeleteCount>().SetArrowNum(bouNum * 2 + 1);
+
+                for (int i = -bouNum; i <= bouNum; i++)
+                {
+                    GameObject arrowCopy = Instantiate(currentArrow, bow.transform, false);
+                    arrowCopy.transform.parent = null;
+                    arrowCopy.transform.forward = currentArrow.transform.forward;
+                    arrowCopy.transform.rotation = currentArrow.transform.rotation;
+                    arrowCopy.transform.localRotation = currentArrow.transform.localRotation;
+                    arrowCopy.gameObject.transform.position = currentArrow.transform.position;
+                    arrowCopy.gameObject.transform.Rotate(0.0f, 5.0f * i, 0.0f, Space.Self);
+
+                    Arrow arrowCopy1 = arrowCopy.GetComponent<Arrow>();
+
+                    arrowCopy1.SetArrowDeleteArea(arrowDeleteObject);
+                    arrowCopy1.arrowHeadRB.AddForce(arrowCopy.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange);
+                    arrowCopy1.arrowHeadRB.AddTorque(arrowCopy.transform.forward * 10);
+                    arrowCopy1.ArrowReleased(100.0f);
+                    arrowCopy1.damage = damage;
+                }
+
+                //arrow.arrowHeadRB.AddForce( currentArrow.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange );
+                //arrow.arrowHeadRB.AddTorque( currentArrow.transform.forward * 10 );
+
             }
-
-            GameObject arrowDeleteObject = Instantiate(arrowDeleteCount,null);
-            arrowDeleteObject.GetComponent<ArrowDeleteCount>().SetArrowNum(bouNum * 2 + 1);
-
-            for (int i = -bouNum; i <= bouNum; i++)
-            {
-                GameObject arrowCopy = Instantiate(currentArrow, bow.transform, false);
-                arrowCopy.transform.parent = null;
-                arrowCopy.transform.forward = currentArrow.transform.forward;
-                arrowCopy.transform.rotation = currentArrow.transform.rotation;
-                arrowCopy.transform.localRotation = currentArrow.transform.localRotation;
-                arrowCopy.gameObject.transform.position = currentArrow.transform.position;
-                arrowCopy.gameObject.transform.Rotate(0.0f, 5.0f * i, 0.0f, Space.Self);
-
-                Arrow arrowCopy1 = arrowCopy.GetComponent<Arrow>();
-
-                arrowCopy1.SetArrowDeleteArea(arrowDeleteObject);
-                arrowCopy1.arrowHeadRB.AddForce(arrowCopy.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange);
-                arrowCopy1.arrowHeadRB.AddTorque(arrowCopy.transform.forward * 10);
-                arrowCopy1.ArrowReleased(100.0f);
-                arrowCopy1.damage = damage;
-            }
-
-            //arrow.arrowHeadRB.AddForce( currentArrow.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange );
-            //arrow.arrowHeadRB.AddTorque( currentArrow.transform.forward * 10 );
-
             nocked = false;
             nockedWithType = GrabTypes.None;
 
             currentArrow.GetComponent<Arrow>().ArrowReleased(bow.GetArrowVelocity());
             bow.ArrowReleased();
-
-
 
             Destroy(currentArrow);
 

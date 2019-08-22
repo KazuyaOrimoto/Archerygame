@@ -80,7 +80,6 @@ namespace Valve.VR.InteractionSystem
 
             airReleaseSound.Play();
 
-
 			if ( glintParticle != null )
 			{
 				//glintParticle.Play();
