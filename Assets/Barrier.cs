@@ -8,7 +8,7 @@ public class Barrier : MonoBehaviour
     private int BarrierHP = 5;
 
     [SerializeField]
-    private GameObject GameEndUI;
+    private GameObject GameEndUI = null;
 
     // Start is called before the first frame update
     void Start()

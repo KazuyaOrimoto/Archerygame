@@ -5,9 +5,9 @@ using UnityEngine;
 public class UI : MonoBehaviour
 {
     [SerializeField]
-    private Sprite[] number;
+    private Sprite[] number = null;
     [SerializeField]
-    private GameObject comboUI;
+    private GameObject comboUI = null;
 
     // Start is called before the first frame update
     void Start()

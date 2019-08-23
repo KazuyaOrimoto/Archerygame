@@ -15,9 +15,9 @@ public class BellEnemy : MonoBehaviour
     private int hp = 3;
     private GameObject player;
     [SerializeField]
-    private GameObject ChaegeEffect;
+    private GameObject ChaegeEffect = null;
     [SerializeField]
-    private GameObject AttackEffect;
+    private GameObject AttackEffect = null;
     private MoveEnemy move;
 
     GameObject effect;
@@ -69,11 +69,20 @@ public class BellEnemy : MonoBehaviour
                 ComboCountObject.ArrowHit();
                 ArrowDeleteCount arrowDeleteCount = arrow.DeleteAreaObject.GetComponent<ArrowDeleteCount>();
                 arrowDeleteCount.HitArrow();
+                DestroyObject(other.gameObject);
+            }
+            else
+            {
+                SpecialSkill specialSkill = other.GetComponent<SpecialSkill>();
+                if (specialSkill != null)
+                {
+                    ComboCountObject.ArrowHit();
+                    hp = 0;
+                }
             }
             int comboNum = ComboCountObject.GetCombo();
             GameObject ui = UiObject.GetNumber(comboNum);
             ui.transform.position = this.transform.position;
-            DestroyObject(other.gameObject);
             if (hp <= 0)
             {
                 DestroyObject(this.gameObject);

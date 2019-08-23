@@ -5,29 +5,30 @@ using UnityEngine;
 public class Combo : MonoBehaviour
 {
     [SerializeField]
-    private GameObject specialSkill1;
+    private GameObject specialSkill1 = null;
+    private bool used1 = false;
     [SerializeField]
-    private GameObject specialSkill2;
+    private GameObject specialSkill2 = null;
+    private bool used2 = false;
     [SerializeField]
-    private GameObject specialSkill3;
+    private GameObject specialSkill3 = null;
     private int comboCount = 0;
     private int canUseSpecialNum = 50;
     // Start is called before the first frame update
     void Start()
     {
-        
+        comboCount = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void ArrowHit()
     {
         comboCount++;
-        Debug.Log(comboCount);
     }
 
     public int GetCombo()
@@ -41,7 +42,7 @@ public class Combo : MonoBehaviour
 
         comboBonus = comboCount / 10;
 
-        if(comboBonus > 2.0)
+        if (comboBonus > 2.0)
         {
             comboBonus = 2.0f;
         }
@@ -51,19 +52,30 @@ public class Combo : MonoBehaviour
     public void ResetComboCount()
     {
         comboCount = 0;
+        used1 = false;
+        used2 = false;
+        canUseSpecialNum = 50;
     }
 
     public GameObject GetSpecialSkill()
     {
-        if(comboCount >= 15)
+        if (comboCount >= 15)
         {
-            return specialSkill1;
+            if (!used1)
+            {
+                used1 = true;
+                return specialSkill1;
+            }
         }
-        else if(comboCount >= 30)
+        if (comboCount >= 30)
         {
-            return specialSkill2;
+            if(!used2)
+            {
+                used2 = true;
+                return specialSkill2;
+            }
         }
-        else if(comboCount >= canUseSpecialNum)
+        if (comboCount >= canUseSpecialNum)
         {
             canUseSpecialNum += 10;
             return specialSkill3;

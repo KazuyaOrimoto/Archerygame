@@ -9,6 +9,8 @@ namespace Valve.VR.InteractionSystem
         [SerializeField]
         private GameObject arrowPrefab;
 
+        public GameObject[] arrow;
+
         private int arrowNum = 0;
         private int deleteArrowNum = 0;
         private int HitArrawNum = 0;

@@ -75,6 +75,9 @@ namespace Valve.VR.InteractionSystem
 		{
             GameObject effect = Instantiate(ArrowFX,this.transform);
 
+            effect.GetComponent<ParticleSystem>().Clear();
+            effect.GetComponent<ParticleSystem>().Play();
+
             inFlight = true;
 			released = true;
 
@@ -109,7 +112,7 @@ namespace Valve.VR.InteractionSystem
 
             SetCollisionMode(CollisionDetectionMode.ContinuousDynamic);
 
-			Destroy( gameObject, 10 );
+			Destroy( gameObject, 5 );
 
 		}
 

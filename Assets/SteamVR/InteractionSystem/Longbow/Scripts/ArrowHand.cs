@@ -232,9 +232,13 @@ namespace Valve.VR.InteractionSystem
         //-------------------------------------------------
         private void FireArrow()
         {
-            if(comboChecker.GetSpecialSkill() != null)
+            GameObject special = comboChecker.GetSpecialSkill();
+            if (special != null)
             {
-
+                GameObject obj = Instantiate(special,null);
+                obj.transform.forward = currentArrow.transform.forward;
+                obj.transform.position = currentArrow.transform.position;
+                Destroy(obj, 5);
             }
             else
             {
@@ -266,7 +270,8 @@ namespace Valve.VR.InteractionSystem
                 }
 
                 GameObject arrowDeleteObject = Instantiate(arrowDeleteCount, null);
-                arrowDeleteObject.GetComponent<ArrowDeleteCount>().SetArrowNum(bouNum * 2 + 1);
+                ArrowDeleteCount arrowDelete = arrowDeleteObject.GetComponent<ArrowDeleteCount>();
+                arrowDelete.SetArrowNum(bouNum * 2 + 1);
 
                 for (int i = -bouNum; i <= bouNum; i++)
                 {
@@ -286,9 +291,6 @@ namespace Valve.VR.InteractionSystem
                     arrowCopy1.ArrowReleased(100.0f);
                     arrowCopy1.damage = damage;
                 }
-
-                //arrow.arrowHeadRB.AddForce( currentArrow.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange );
-                //arrow.arrowHeadRB.AddTorque( currentArrow.transform.forward * 10 );
 
             }
             nocked = false;

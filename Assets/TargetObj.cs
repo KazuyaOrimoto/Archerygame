@@ -5,15 +5,15 @@ using UnityEngine;
 public class TargetObj : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] target1;
+    private GameObject[] target1 = null;
     [SerializeField]
-    private GameObject[] target2;
+    private GameObject[] target2 = null;
     [SerializeField]
-    private GameObject[] target3;
+    private GameObject[] target3 = null;
     [SerializeField]
-    private GameObject[] target4;
+    private GameObject[] target4 = null;
 
-    private GameObject targetGoal;
+    private GameObject targetGoal = null;
 
     private int targetNum = 0;
 

@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CreateGameObject: {fileID: 673498117134889091, guid: 0678a499f3ae0984993fcb083668ad19,
     type: 3}
-  RespawnTime: 15
+  RespawnTime: 20
   RespawnTimeRange: 5
 --- !u!1001 &165280659
 PrefabInstance:
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CreateGameObject: {fileID: 673498117134889091, guid: 904a0e9c024acda42a35b8c8876f4050,
     type: 3}
-  RespawnTime: 15
+  RespawnTime: 20
   RespawnTimeRange: 5
 --- !u!1001 &225965389
 PrefabInstance:
@@ -444,6 +444,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 690986578}
+  - {fileID: 1884671297}
+  - {fileID: 824331456}
   - {fileID: 262044587}
   - {fileID: 802480097}
   - {fileID: 2095977833}
@@ -451,8 +453,6 @@ Transform:
   - {fileID: 370979785}
   - {fileID: 1310957736}
   - {fileID: 225965390}
-  - {fileID: 1884671297}
-  - {fileID: 824331456}
   - {fileID: 717725635}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CreateGameObject: {fileID: 8835034475302119327, guid: 72e4bbc958b3f184eb03ed900e8211d3,
     type: 3}
-  RespawnTime: 15
+  RespawnTime: 20
   RespawnTimeRange: 5
 --- !u!4 &372767220
 Transform:
@@ -993,7 +993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CreateGameObject: {fileID: 3647610553956970750, guid: d924b04c4cde309479871954a60710ec,
     type: 3}
-  RespawnTime: 15
+  RespawnTime: 20
   RespawnTimeRange: 5
 --- !u!4 &608632736
 Transform:
@@ -1346,7 +1346,7 @@ Transform:
   - {fileID: 1941076935}
   - {fileID: 464353347}
   m_Father: {fileID: 263879366}
-  m_RootOrder: 9
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &902225074
 PrefabInstance:
@@ -1587,9 +1587,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a3f0b5c15734049982ae1a30bcdb0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specialSkill1: {fileID: 989838547122802303, guid: 1eb1c8422e5942542acf4ac624360657,
+  specialSkill1: {fileID: 5525166409231223832, guid: 10e235a5d2501434eba2ad182ffdec37,
     type: 3}
-  specialSkill2: {fileID: 5028853557242832349, guid: 00ded34a2ef0e424d9d9c30a9be6cff7,
+  specialSkill2: {fileID: 5525166409231223832, guid: 10e235a5d2501434eba2ad182ffdec37,
     type: 3}
   specialSkill3: {fileID: 5525166409231223832, guid: 10e235a5d2501434eba2ad182ffdec37,
     type: 3}
@@ -1907,7 +1907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CreateGameObject: {fileID: 8835034475302119327, guid: 795b9d070ba4ace4a9784fe18fcd79e4,
     type: 3}
-  RespawnTime: 15
+  RespawnTime: 20
   RespawnTimeRange: 5
 --- !u!4 &1285225539
 Transform:
@@ -2269,7 +2269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CreateGameObject: {fileID: 673498117134889091, guid: b3d5c49ce165fa84792682c80845ff86,
     type: 3}
-  RespawnTime: 15
+  RespawnTime: 20
   RespawnTimeRange: 5
 --- !u!4 &1489509073
 Transform:
@@ -2958,7 +2958,7 @@ Transform:
   - {fileID: 1182016758}
   - {fileID: 1251163641}
   m_Father: {fileID: 263879366}
-  m_RootOrder: 8
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1888118311
 PrefabInstance:
