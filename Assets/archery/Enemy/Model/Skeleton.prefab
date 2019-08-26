@@ -3,8 +3,7 @@
 --- !u!1 &3940281651623996124
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4456639203304282962, guid: 3e36c6737d55c304b961bf3ddd91dfd3,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -26,8 +25,7 @@ GameObject:
 --- !u!4 &3940281651623996115
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4456639203304769394, guid: 3e36c6737d55c304b961bf3ddd91dfd3,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3940281651623996124}
@@ -41,8 +39,7 @@ Transform:
 --- !u!33 &3940281651623996112
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4456639203307669334, guid: 3e36c6737d55c304b961bf3ddd91dfd3,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3940281651623996124}
@@ -50,8 +47,7 @@ MeshFilter:
 --- !u!23 &3940281651623996113
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4456639203306538390, guid: 3e36c6737d55c304b961bf3ddd91dfd3,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3940281651623996124}
@@ -89,8 +85,7 @@ MeshRenderer:
 --- !u!114 &3940281651623996126
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 810000896843319810, guid: 3e36c6737d55c304b961bf3ddd91dfd3,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3940281651623996124}
@@ -99,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b480809d1b87f34e82cc61aa28c1a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDieEffect: {fileID: 8383175249517314613, guid: 3249b201729321e4dbcc12f85a20040e,
+  enemyDieEffect: {fileID: 6422625704944280219, guid: b3415b466f30be74ea49b05d7bc0962f,
     type: 3}
   enemyHitEffect: {fileID: 4436312580927929549, guid: 216ecfc604e14094b8938f6b1c41cb3d,
     type: 3}
@@ -111,8 +106,7 @@ MonoBehaviour:
 --- !u!136 &3940281651623996127
 CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4978716379742218902, guid: 3e36c6737d55c304b961bf3ddd91dfd3,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3940281651623996124}
@@ -127,8 +121,7 @@ CapsuleCollider:
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1634654689250716804, guid: 3e36c6737d55c304b961bf3ddd91dfd3,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3940281651623996124}

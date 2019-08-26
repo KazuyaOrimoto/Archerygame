@@ -29,6 +29,8 @@ public class Combo : MonoBehaviour
     public void ArrowHit()
     {
         comboCount++;
+        comboCount++;
+        comboCount++;
     }
 
     public int GetCombo()

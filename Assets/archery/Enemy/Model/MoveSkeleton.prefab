@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 27747558743414105}
   - component: {fileID: 2280265558774320167}
   m_Layer: 0
-  m_Name: MoveSkeleton 3
+  m_Name: MoveSkeleton
   m_TagString: Skeleton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

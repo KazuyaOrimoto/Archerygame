@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sptail
+  m_Shader: {fileID: 4800000, guid: 914dbe2f8dddd3a4fb46bb62eafe127c, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_57F425A1:
+        m_Texture: {fileID: 2800000, guid: caeb238b6d213f94785f0ff305ba2ca2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_7C4468E: 0
+    - Vector1_92DA64F5: -2.5
+    - Vector1_B5DE5F65: 5
+    m_Colors:
+    - Color_8CB75AA9: {r: 0, g: 3.376728, b: 10.680627, a: 0}

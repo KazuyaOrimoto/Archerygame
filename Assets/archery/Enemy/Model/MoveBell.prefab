@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35966b7b89ce4af4f8db06a6b2fb995d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDieEffect: {fileID: 8383175249517314613, guid: 3249b201729321e4dbcc12f85a20040e,
+  enemyDieEffect: {fileID: 6422625704944280219, guid: b3415b466f30be74ea49b05d7bc0962f,
     type: 3}
   enemyHitEffect: {fileID: 4436312580927929549, guid: 216ecfc604e14094b8938f6b1c41cb3d,
     type: 3}

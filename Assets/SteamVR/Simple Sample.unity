@@ -1587,11 +1587,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a3f0b5c15734049982ae1a30bcdb0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specialSkill1: {fileID: 5525166409231223832, guid: 10e235a5d2501434eba2ad182ffdec37,
+  specialSkill1: {fileID: 3503285082726028906, guid: b414f8a1fbc240848951734dec8c790a,
     type: 3}
-  specialSkill2: {fileID: 5525166409231223832, guid: 10e235a5d2501434eba2ad182ffdec37,
+  specialSkill2: {fileID: 4822486068637569614, guid: fa44f2f4b9ff7f5459e1763dc218ed1e,
     type: 3}
-  specialSkill3: {fileID: 5525166409231223832, guid: 10e235a5d2501434eba2ad182ffdec37,
+  specialSkill3: {fileID: 8387036217025725015, guid: 10e235a5d2501434eba2ad182ffdec37,
     type: 3}
 --- !u!4 &1038989154
 Transform:
