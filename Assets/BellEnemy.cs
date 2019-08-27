@@ -44,18 +44,17 @@ public class BellEnemy : MonoBehaviour
             Attack();
         }
     }
-    [System.Obsolete]
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "projectile")
         {
-            DestroyObject(collision.gameObject);
-            DestroyObject(this.gameObject);
+            Destroy(collision.gameObject);
+            Destroy(this.transform.parent.gameObject);
             GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
         }
     }
 
-    [System.Obsolete]
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "projectile")
@@ -69,7 +68,7 @@ public class BellEnemy : MonoBehaviour
                 ComboCountObject.ArrowHit();
                 ArrowDeleteCount arrowDeleteCount = arrow.DeleteAreaObject.GetComponent<ArrowDeleteCount>();
                 arrowDeleteCount.HitArrow();
-                DestroyObject(other.gameObject);
+                Destroy(other.gameObject);
             }
             else
             {
@@ -85,7 +84,7 @@ public class BellEnemy : MonoBehaviour
             ui.transform.position = this.transform.position;
             if (hp <= 0)
             {
-                DestroyObject(this.gameObject);
+                Destroy(this.transform.parent.gameObject);
                 GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
             }
             else
@@ -120,7 +119,7 @@ public class BellEnemy : MonoBehaviour
 
     private void Attack()
     {
-        if((player.transform.position - transform.position).magnitude > 2.0)
+        if((player.transform.position - transform.position).magnitude > 3.0)
         {
             return;
         }
@@ -138,6 +137,7 @@ public class BellEnemy : MonoBehaviour
                 charge = false;
                 charged = false;
                 attacked = false;
+                Destroy(this.transform.parent.gameObject);
             }
             //攻撃してたら
             else

@@ -924,7 +924,7 @@ MonoBehaviour:
   hitTargetSound: {fileID: 11455580}
   hitGroundSound: {fileID: 11470766}
   speed: 30
-  ArrowFX: {fileID: 6649195477380778892, guid: 7116c4338435fd046b415a24586ac346, type: 3}
+  ArrowFX: {fileID: 1631118457537584617, guid: 9ee6e9eafe55ce3419412d623e0432bb, type: 3}
 --- !u!65 &6590140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -936,7 +936,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.01, z: 0.82}
+  m_Size: {x: 0.1, y: 0.1, z: 0.82}
   m_Center: {x: 0, y: 0, z: 0.41}
 --- !u!54 &7077433397202976763
 Rigidbody:

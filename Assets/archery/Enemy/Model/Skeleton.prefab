@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b480809d1b87f34e82cc61aa28c1a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDieEffect: {fileID: 6422625704944280219, guid: b3415b466f30be74ea49b05d7bc0962f,
+  enemyDieEffect: {fileID: 7001315006495968190, guid: b3415b466f30be74ea49b05d7bc0962f,
     type: 3}
   enemyHitEffect: {fileID: 4436312580927929549, guid: 216ecfc604e14094b8938f6b1c41cb3d,
     type: 3}

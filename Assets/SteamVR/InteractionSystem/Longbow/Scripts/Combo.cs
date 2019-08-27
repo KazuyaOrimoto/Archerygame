@@ -13,7 +13,7 @@ public class Combo : MonoBehaviour
     [SerializeField]
     private GameObject specialSkill3 = null;
     private int comboCount = 0;
-    private int canUseSpecialNum = 50;
+    private int canUseSpecialNum = 40;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,12 +54,12 @@ public class Combo : MonoBehaviour
         comboCount = 0;
         used1 = false;
         used2 = false;
-        canUseSpecialNum = 50;
+        canUseSpecialNum = 40;
     }
 
     public GameObject GetSpecialSkill()
     {
-        if (comboCount >= 15)
+        if (comboCount >= 10)
         {
             if (!used1)
             {
@@ -67,7 +67,7 @@ public class Combo : MonoBehaviour
                 return specialSkill1;
             }
         }
-        if (comboCount >= 30)
+        if (comboCount >= 25)
         {
             if(!used2)
             {

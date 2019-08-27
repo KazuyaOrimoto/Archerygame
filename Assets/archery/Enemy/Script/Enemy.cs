@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "projectile")
         {
             DestroyObject(collision.gameObject);
-            DestroyObject(this.gameObject);
+            DestroyObject(this.transform.parent.gameObject);
             GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
         }
     }
@@ -96,7 +96,7 @@ public class Enemy : MonoBehaviour
             ui.transform.position = this.transform.position;
             if (hp <= 0)
             {
-                DestroyObject(this.gameObject);
+                DestroyObject(this.transform.parent.gameObject);
                 GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
             }
             else

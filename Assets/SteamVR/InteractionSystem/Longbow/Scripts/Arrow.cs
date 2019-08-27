@@ -75,9 +75,6 @@ namespace Valve.VR.InteractionSystem
 		{
             GameObject effect = Instantiate(ArrowFX,this.transform);
 
-            effect.GetComponent<ParticleSystem>().Clear();
-            effect.GetComponent<ParticleSystem>().Play();
-
             inFlight = true;
 			released = true;
 

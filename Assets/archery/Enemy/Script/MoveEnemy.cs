@@ -128,6 +128,10 @@ public class MoveEnemy : MonoBehaviour
 
     private void BarrierAttack()
     {
+        if(anim == null)
+        {
+            anim = transform.GetChild(0).GetComponent<Animator>();
+        }
         anim.SetTrigger("BarrierAttack");
         transform.forward =new Vector3(0.0f, 0.0f, 1.0f).normalized;
     }

@@ -6,6 +6,8 @@ public class ComboUIMove : MonoBehaviour
 {
     private GameObject player;
     private float time = 0;
+    [SerializeField]
+    private float moveSpeeed = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,7 @@ public class ComboUIMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position +=new Vector3(0.0f, moveSpeeed, 0.0f) * Time.deltaTime;
         time += Time.deltaTime;
         if(time > 1.0f)
         {
