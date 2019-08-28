@@ -151,3 +151,5 @@ MonoBehaviour:
     type: 3}
   AttackEffect: {fileID: 2222558965104047621, guid: 44646b0f2d82ade448c1fb88c98fa686,
     type: 3}
+  layObject: {fileID: 2451070533385413671, guid: bdd01a0c91631b24e8fb786d59d6d912,
+    type: 3}

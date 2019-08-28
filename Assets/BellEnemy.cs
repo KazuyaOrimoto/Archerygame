@@ -22,6 +22,9 @@ public class BellEnemy : MonoBehaviour
 
     GameObject effect;
 
+    [SerializeField]
+    private GameObject layObject;
+
     bool attack = false;
     bool attacked = false;
     bool charged = false;
@@ -99,6 +102,7 @@ public class BellEnemy : MonoBehaviour
             this.transform.parent.LookAt(player.transform);
             transform.parent.Rotate(new Vector3(0, 1, 0), 180);
             transform.parent.gameObject.GetComponent<MoveEnemy>().SetTarget(player);
+            GameObject lay = Instantiate(layObject, this.transform.parent.transform);
         }
     }
 

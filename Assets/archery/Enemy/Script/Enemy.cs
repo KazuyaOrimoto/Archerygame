@@ -20,6 +20,9 @@ public class Enemy : MonoBehaviour
     private GameObject AttackEffect = null;
     private MoveEnemy move;
 
+    [SerializeField]
+    private GameObject layObject;
+
     GameObject effect;
 
     bool attack = false;
@@ -111,6 +114,7 @@ public class Enemy : MonoBehaviour
             MoveStop();
             this.transform.parent.LookAt(player.transform);
             transform.parent.Rotate(new Vector3(0, 1, 0), 180);
+            GameObject lay = Instantiate(layObject,this.transform.parent.transform);
         }
     }
 

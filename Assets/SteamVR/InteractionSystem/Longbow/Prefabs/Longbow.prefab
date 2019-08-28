@@ -1818,7 +1818,7 @@ GameObject:
   - component: {fileID: 8241728038531742203}
   m_Layer: 0
   m_Name: Longbow
-  m_TagString: Untagged
+  m_TagString: LongBow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2045,10 +2045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405b010dee5e80b44b278f57b39ce797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeEffect: {fileID: 6847321878798658118, guid: 1c9acd9e4a54c4e409f8b243d14ab61a,
-    type: 3}
-  shotEffect: {fileID: 1902630951124823970, guid: 8efc7b1507d1e1148830bfb1dbc8733b,
-    type: 3}
+  comboChecker: {fileID: 0}
 --- !u!1 &173948
 GameObject:
   m_ObjectHideFlags: 0

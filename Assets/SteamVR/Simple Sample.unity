@@ -1100,6 +1100,7 @@ MonoBehaviour:
   BarrierHP: 30
   GameEndUI: {fileID: 7056754338710352884, guid: 7670db5d5bc29e94790e9847be9272ca,
     type: 3}
+  effect: {fileID: 6339762228726025359, guid: b2b5dd55be6c10945b2380c41a246783, type: 3}
 --- !u!4 &690986578
 Transform:
   m_ObjectHideFlags: 0
@@ -3025,6 +3026,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BowPickup
       objectReference: {fileID: 0}
+    - target: {fileID: 26382942206266523, guid: 137f9000a0796db4ab177642c700e4e0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 26382942206266522, guid: 137f9000a0796db4ab177642c700e4e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3079,6 +3085,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 26382940760091397, guid: 137f9000a0796db4ab177642c700e4e0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 137f9000a0796db4ab177642c700e4e0, type: 3}

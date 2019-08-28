@@ -10,6 +10,9 @@ public class Barrier : MonoBehaviour
     [SerializeField]
     private GameObject GameEndUI = null;
 
+    [SerializeField]
+    private GameObject effect = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,7 @@ public class Barrier : MonoBehaviour
 
     public void AttackedEnemy()
     {
+        Instantiate(effect,this.transform);
         BarrierHP--;
     }
 }

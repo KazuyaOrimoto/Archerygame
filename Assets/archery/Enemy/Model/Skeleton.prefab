@@ -103,6 +103,8 @@ MonoBehaviour:
     type: 3}
   AttackEffect: {fileID: 1848431562631475508, guid: 35f687a131535ef42843c45526bbb2ab,
     type: 3}
+  layObject: {fileID: 2451070533385413671, guid: bdd01a0c91631b24e8fb786d59d6d912,
+    type: 3}
 --- !u!136 &3940281651623996127
 CapsuleCollider:
   m_ObjectHideFlags: 0
