@@ -14,6 +14,15 @@ public class Combo : MonoBehaviour
     private GameObject specialSkill3 = null;
     private int comboCount = 0;
     private int canUseSpecialNum = 40;
+    [SerializeField]
+    private GameObject chargeEffect = null;
+
+    private GameObject charge = null;
+
+    private bool create1 = false;
+    private bool create2 = false;
+    private bool create3 = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +32,27 @@ public class Combo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (comboCount >= 10)
+        {
+            if (!create1)
+            {
+                create1 = true;
+                CreateChargeEffect();
+            }
+        }
+        if (comboCount >= 25)
+        {
+            if (!create2)
+            {
+                create2 = true;
+                CreateChargeEffect();
+            }
+        }
+        if (!create3 && comboCount >= canUseSpecialNum)
+        {
+            create3 = true;
+            CreateChargeEffect();
+        }
     }
 
     public void ArrowHit()
@@ -54,6 +83,9 @@ public class Combo : MonoBehaviour
         comboCount = 0;
         used1 = false;
         used2 = false;
+        create1 = false;
+        create2 = false;
+        create3 = false;
         canUseSpecialNum = 40;
     }
 
@@ -64,6 +96,10 @@ public class Combo : MonoBehaviour
             if (!used1)
             {
                 used1 = true;
+                if(charge != null)
+                {
+                    Destroy(charge);
+                }
                 return specialSkill1;
             }
         }
@@ -72,16 +108,34 @@ public class Combo : MonoBehaviour
             if(!used2)
             {
                 used2 = true;
+                if (charge != null)
+                {
+                    Destroy(charge);
+                }
                 return specialSkill2;
             }
         }
         if (comboCount >= canUseSpecialNum)
         {
+            if (charge != null)
+            {
+                Destroy(charge);
+            }
             canUseSpecialNum += 10;
+            create3 = false;
             return specialSkill3;
         }
 
         return null;
+    }
+
+    private void CreateChargeEffect()
+    {
+        GameObject longbow = GameObject.FindGameObjectWithTag("LongBow");
+        if(longbow != null)
+        {
+            charge = Instantiate(chargeEffect, longbow.transform);
+        }
     }
 
 }

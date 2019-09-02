@@ -25,5 +25,5 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_DDD64957: {r: 3.9999995, g: 3.9999995, b: 3.9999995, a: 0}
+    - Color_DDD64957: {r: 2.7292817, g: 2.6597435, b: 0.3475972, a: 0}
     - Vector2_13FD23A8: {r: 0, g: -1, b: 0, a: 0}

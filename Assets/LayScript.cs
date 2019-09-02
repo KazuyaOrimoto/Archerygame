@@ -9,7 +9,7 @@ public class LayScript : MonoBehaviour
     [SerializeField]
     GameObject CreateObject = null;
     [SerializeField]
-    float CreateTime = 1.0f;
+    float CreateTime = 0.1f;
     private float time = 0.0f;
 
     // Start is called before the first frame update
@@ -27,6 +27,7 @@ public class LayScript : MonoBehaviour
         time += Time.deltaTime;
         if(time > CreateTime)
         {
+            time = 0;
             GameObject gameObject = Instantiate(CreateObject,this.transform);
             gameObject.transform.position = this.transform.position;
         }

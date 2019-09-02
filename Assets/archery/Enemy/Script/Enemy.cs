@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     private MoveEnemy move;
 
     [SerializeField]
-    private GameObject layObject;
+    private GameObject layObject = null;
 
     GameObject effect;
 

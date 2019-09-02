@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sparrowcharge
+  m_Shader: {fileID: 4800000, guid: 85a8fb5b0c5b5324d8e5861f33a02d62, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_C0897B0E:
+        m_Texture: {fileID: 2800000, guid: 4af1edf52ac893b4597ad445834ab07f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_A1A1CF6D_Out:
+        m_Texture: {fileID: 2800000, guid: 41c88acf4ffbb2e459100661e7fe7446, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_A54395B1: 6
+    m_Colors:
+    - Color_4EA5C0C0: {r: 0, g: 1.0980393, b: 4, a: 0}
+    - Vector2_907A18CF: {r: -1, g: 0, b: 0, a: 0}

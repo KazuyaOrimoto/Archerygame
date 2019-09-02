@@ -23,7 +23,7 @@ public class BellEnemy : MonoBehaviour
     GameObject effect;
 
     [SerializeField]
-    private GameObject layObject;
+    private GameObject layObject = null;
 
     bool attack = false;
     bool attacked = false;

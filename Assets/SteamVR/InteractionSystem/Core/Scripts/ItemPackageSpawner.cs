@@ -235,7 +235,7 @@ namespace Valve.VR.InteractionSystem
 			{
                 GrabTypes startingGrab = hand.GetGrabStarting();
 
-				if (startingGrab != GrabTypes.None)
+				if (true)
 				{
 					SpawnAndAttachObject( hand, GrabTypes.Scripted);
 				}
