@@ -13,10 +13,12 @@ public class Barrier : MonoBehaviour
     [SerializeField]
     private GameObject effect = null;
 
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,5 +34,6 @@ public class Barrier : MonoBehaviour
     {
         Instantiate(effect,this.transform);
         BarrierHP--;
+        audioSource.Play();
     }
 }
