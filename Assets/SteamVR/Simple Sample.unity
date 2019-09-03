@@ -1493,8 +1493,8 @@ MonoBehaviour:
   - 5
   - 5
   changeWaveTime:
-  - 30
-  - 30
+  - 40
+  - 60
 --- !u!4 &516000393
 Transform:
   m_ObjectHideFlags: 0
@@ -5731,7 +5731,7 @@ PrefabInstance:
     - target: {fileID: 26382942206266522, guid: 137f9000a0796db4ab177642c700e4e0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.465
+      value: -6.864
       objectReference: {fileID: 0}
     - target: {fileID: 26382942206266522, guid: 137f9000a0796db4ab177642c700e4e0,
         type: 3}
@@ -5741,7 +5741,7 @@ PrefabInstance:
     - target: {fileID: 26382942206266522, guid: 137f9000a0796db4ab177642c700e4e0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.935
+      value: -6.616
       objectReference: {fileID: 0}
     - target: {fileID: 26382942206266522, guid: 137f9000a0796db4ab177642c700e4e0,
         type: 3}
