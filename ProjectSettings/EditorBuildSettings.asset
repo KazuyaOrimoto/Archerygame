@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/LoadEffect.unity
+    guid: 7893aefdac97cf343b8b76807183df9f
+  - enabled: 1
+    path: Assets/SteamVR/Simple Sample.unity
+    guid: 55f0e497bac1408458ff9dcebe0b775a
   m_configObjects: {}

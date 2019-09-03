@@ -1488,12 +1488,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnTime:
   - 20
-  - 20
+  - 15
   respawnRangeTime:
   - 5
   - 5
   changeWaveTime:
-  - 40
+  - 60
   - 60
 --- !u!4 &516000393
 Transform:

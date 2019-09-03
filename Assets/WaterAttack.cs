@@ -11,10 +11,12 @@ public class WaterAttack : MonoBehaviour
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        this.transform.LookAt(player.transform);
-        rigit = GetComponent<Rigidbody>();
-        rigit.AddForce(this.transform.forward * Time.deltaTime * speed, ForceMode.Impulse);
-
+        if(player != null)
+        {
+            this.transform.LookAt(player.transform);
+            rigit = GetComponent<Rigidbody>();
+            rigit.AddForce(this.transform.forward * Time.deltaTime * speed, ForceMode.Impulse);
+        }
     }
 
     // Update is called once per frame
