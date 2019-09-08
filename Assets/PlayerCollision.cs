@@ -20,6 +20,17 @@ public class PlayerCollision : MonoBehaviour
     {
         if(other.transform.tag == "EnemyAttackEffect")
         {
+            GameObject effect = null;
+            WaterAttack water = other.gameObject.GetComponent<WaterAttack>();
+            if(water != null)
+            {
+                effect = water.GetHitEffect();
+            }
+            if (effect == null)
+            {
+                effect = other.gameObject.GetComponent<FireAttack>().GetHitEffect();
+            }
+            Instantiate(effect,transform);
             Destroy(other.gameObject);
         }
     }

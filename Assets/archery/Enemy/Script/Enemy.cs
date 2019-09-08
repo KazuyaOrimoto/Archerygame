@@ -118,6 +118,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void GameEnd()
+    {
+        Destroy(this.transform.parent.gameObject);
+        GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
+    }
+
     public void BarrierAttackAnim()
     {
         move.BarrierAttackAnim();

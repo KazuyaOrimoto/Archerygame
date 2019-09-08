@@ -17,19 +17,25 @@ public class LayScript : MonoBehaviour
     {
         longbow = GameObject.FindGameObjectWithTag("LongBow");
         enemyObject = this.transform.parent.gameObject;
-        transform.position = longbow.transform.position;
+        if (longbow != null)
+        {
+            transform.position = longbow.transform.position;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = longbow.transform.position;
-        time += Time.deltaTime;
-        if(time > CreateTime)
+        if(longbow != null)
         {
-            time = 0;
-            GameObject gameObject = Instantiate(CreateObject,this.transform);
-            gameObject.transform.position = this.transform.position;
+            transform.position = longbow.transform.position;
+            time += Time.deltaTime;
+            if (time > CreateTime)
+            {
+                time = 0;
+                GameObject gameObject = Instantiate(CreateObject, this.transform);
+                gameObject.transform.position = this.transform.position;
+            }
         }
     }
 

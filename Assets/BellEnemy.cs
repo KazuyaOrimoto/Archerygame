@@ -106,6 +106,12 @@ public class BellEnemy : MonoBehaviour
         }
     }
 
+    public void GAmeEnd()
+    {
+        Destroy(this.transform.parent.gameObject);
+        GameObject effect = Instantiate(enemyDieEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
+    }
+
     public void BarrierAttackAnim()
     {
         move.BarrierAttackAnim();

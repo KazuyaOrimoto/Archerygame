@@ -7,6 +7,8 @@ public class FireAttack : MonoBehaviour
     private Rigidbody rigit;
     [SerializeField]
     private float speed = 1.0f;
+    [SerializeField]
+    private GameObject hitEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +22,12 @@ public class FireAttack : MonoBehaviour
     //{
     //    if (collision.transform.tag == "Player")
     //    {
-    //        Destroy(this.gameObject);
+    //        Instantiate(hitEffect, collision.gameObject.transform);
     //    }
     //}
 
-    
+    public GameObject GetHitEffect()
+    {
+        return hitEffect;
+    }
 }

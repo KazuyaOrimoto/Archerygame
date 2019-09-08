@@ -18,15 +18,21 @@ public class WaveManager : MonoBehaviour
     private bool setEnemyCreater = true;
     private GameObject[] enemys = null;
 
+    bool gameEnd;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameEnd = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(gameEnd)
+        {
+            return;
+        }
         if (changeWaveTime.Length == waveNum)
         {
             if (enemys == null)
@@ -115,6 +121,11 @@ public class WaveManager : MonoBehaviour
             enemy.SetRenpawnTimeRange(respawnRangeTime[waveNum]);
             enemy.SetCreating(true);
         }
+    }
+
+    public void GameEnd()
+    {
+        gameEnd = true;
     }
 
 }

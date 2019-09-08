@@ -27,7 +27,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 6c154636a358e41b4bcc5d4158c4c529, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9c3511af45ddb954f8c17d2a5c5cd034, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1763,7 +1763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75103d5c1086f4479e458a2a9e603c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BarrierHP: 30
+  BarrierHP: 5
   GameEndUI: {fileID: 7056754338710352884, guid: 7670db5d5bc29e94790e9847be9272ca,
     type: 3}
   effect: {fileID: 3693565456178216848, guid: b2b5dd55be6c10945b2380c41a246783, type: 3}

@@ -4801,6 +4801,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1000
+  hitEffect: {fileID: 6309948427863103930, guid: ffb6f13944497cf4f826e373a428aff4,
+    type: 3}
 --- !u!54 &5491090820236273969
 Rigidbody:
   m_ObjectHideFlags: 0
